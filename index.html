@@ -1,15 +1,170 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: pink</title>
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
-  </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн-курсе «<a href="https://htmlacademy.ru/advanced_intensive">Продвинутый HTML и CSS</a>».</p>
-
-    <!-- <script src="js/script.js"></script> -->
-
-  </body>
+<head>
+	<meta charset="UTF-8">
+	<title>Pink - Главная</title>
+</head>
+<body>
+	<header>
+		<img src="logo" width="" height="" alt="">
+		<div class="header-menu-closed">
+			<div class="stripe"></div>
+			<div class="stripe"></div>
+			<div class="stripe"></div>
+		</div>
+	</header>
+	<nav class="header-menu-opened">
+		<ul>
+			<li>
+				<img src="logo" width="" height="" alt="">
+				<div class="close-btn"></div>
+			</li>
+			<li>
+				<a href="#">Информация</a>
+			</li>
+			<li>
+				<a href="#">Блог</a>
+			</li>
+			<li>
+				<a href="#">Отзывы</a>
+			</li>
+			<li>
+				<a href="#">Конкурс</a>
+			</li>
+		</ul>
+	</nav>
+	<div class="container">
+		<div class="promo">
+			<h2>Взгляните на жизнь иначе!</h2>
+			<img src="iphone" width="" height="" alt="">
+		</div>
+		<div class="app-download">
+			<a href="#">Скачать приложение</a>
+			<div class="os-icons">
+				<img src="apple" width="" height="" alt="">
+				<img src="android" width="" height="" alt="">
+				<img src="winphone" width="" height="" alt="">
+			</div>
+			<p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+		</div>
+		<section class="advantages-text">
+			<h2>Устали от серости мегаполиса?</h2>
+			<h2>Нам есть, что вам предложить!</h2>
+			<aricle class="advantage-1">
+				<h3>Поднимает настроение</h3>
+				<p>Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+			</aricle>
+			<aricle class="advantage-2">
+				<h3>Меняет мир вокруг</h3>
+				<p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+			</aricle>
+			<aricle class="advantage-3">
+				<h3>Заводит новых друзей</h3>
+				<p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+			</aricle>
+			<img src="iphone-hello" width="" height="" alt="">
+		</section>
+		<section class="slider-comments">
+            <input type="radio" id="slide-1" name="toggle" checked>
+            <input type="radio" id="slide-2" name="toggle">
+            <input type="radio" id="slide-3" name="toggle">
+            <div class="slider-inner">
+                <div class="slider-slides">
+                    <div class="slide-content">
+                        <h2>Николай Петров</h2>
+                        <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                    </div>
+                    <div class="slide-content">
+                        <h2>Николай Петров</h2>
+                        <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                    </div>
+                    <div class="slide-content">
+                        <h2>Николай Петров</h2>
+                        <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                    </div>
+                </div>
+            </div>
+            <div class="controls"> 
+	            <label for="slide-1"></label>
+	            <label for="slide-2"></label>
+	            <label for="slide-3"></label>
+            </div>               
+        </section>
+        <section class="slider-tariffs">
+            <input type="radio" id="slide-1" name="toggle">
+            <input type="radio" id="slide-2" name="toggle" checked>
+            <input type="radio" id="slide-3" name="toggle">
+            <div class="slider-inner">
+                <div class="slider-slides">
+                    <div class="slide-content">
+                        <div class="tariff-header">
+                        	<h3>Стандарт</h3>
+                        	<h2>3,99 USD</h2>
+                        </div>
+                        <div class="tariff-item-1">
+                        	<p>Розовый фильтр</p>
+                        </div>
+                         <div class="tariff-item-2">
+                        	<p>Смайлики</p>
+                        </div>
+                         <div class="tariff-item-3">
+                        	<p>Комментарии</p>
+                        </div>
+                    </div>
+                    <div class="slide-content">
+                        <div class="tariff-header">
+                        	<h3>База</h3>
+                        	<h2>1,99 USD</h2>
+                        </div>
+                        <div class="tariff-item-1">
+                        	<p>Розовый фильтр</p>
+                        </div>
+                         <div class="tariff-item-2">
+                        	<p>Смайлики</p>
+                        </div>
+                         <div class="tariff-item-3">
+                        	<p>Комментарии</p>
+                        </div>
+                    </div>
+                    <div class="slide-content">
+                        <div class="tariff-header">
+                        	<h3>Анлим</h3>
+                        	<h2>9,99 USD</h2>
+                        </div>
+                        <div class="tariff-item-1">
+                        	<p>Розовый фильтр</p>
+                        </div>
+                         <div class="tariff-item-2">
+                        	<p>Смайлики</p>
+                        </div>
+                         <div class="tariff-item-3">
+                        	<p>Комментарии</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="controls"> 
+	            <label for="slide-1"></label>
+	            <label for="slide-2"></label>
+	            <label for="slide-3"></label>
+            </div>               
+        </section>
+		<section class="contacts">
+			<h1>Остались вопросы? Свяжитесь с нами!</h1>
+			<div class="call-us">
+				<h3>Звоните:</h3>
+				<h2>+7 (812) 555-66-66</h2>
+			</div>
+			<div class="write-us">
+				<h3>Пишите:</h3>
+				<h2>mail@htmlacademy.ru</h2>
+			</div>
+			<div class="come-to-us">
+				<h3>Приезжайте в гости:</h3>
+				<h2>ул. Большая Конюшенная, 19/8</h2>
+			</div>
+		</section>
+		<img src="map" width="" height="" alt="">
+	</div>
+</body>
 </html>
