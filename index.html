@@ -1,15 +1,159 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: pink</title>
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
-  </head>
-  <body>
+<head>
+	<meta charset="UTF-8">
+	<title>Pink - Главная</title>
+</head>
+<body>
+	<header class="page-header">
+		<a href="index.html" class="page-header__logo"></a>
+		<a href="#" class="main-nav__toggle  main-nav__toggle--closed">
+	</header>
+	<nav class="main-nav">
+		<ul class="main-nav__list">
+			<li class="main-nav__item"></li>
+			<li class="main-nav__item"><a href="#">Информация</a></li>
+			<li class="main-nav__item"><a href="#">Блог</a></li>
+			<li class="main-nav__item"><a href="#">Отзывы</a></li>
+			<li class="main-nav__item"><a href="#">Конкурс</a></li>
+		</ul>
+	</nav>
+	<div class="page-container">
+		<div class="promo">
+			<h2 class="promo__header">Взгляните на жизнь иначе!</h2>
+			<img class="promo__img-iphone" src="iphone" width="" height="" alt="">
+		</div>
+		<div class="app-download">
+			<a href="#" class="app-download__btn">Скачать приложение</a>
+			<ul class="app-download__os-icons">
+				<li><img class="app-download__icon-apple" src="apple" width="" height="" alt=""></li>
+				<li><img class="app-download__icon-android" src="android" width="" height="" alt=""></li>
+				<li><img class="app-download__icon-winphone" src="winphone" width="" height="" alt=""></li>
+			</ul>
+			<p class="app-download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+		</div>
+		<section class="advantages">
+			<h2 class="advantages__header">Устали от серости мегаполиса?</h2>
+			<h2 class="advantages__header">Нам есть, что вам предложить!</h2>
+			<article class="advantage-item">
+				<h3 class="advantage-item__header">Поднимает настроение</h3>
+				<p class="advantage-item__text">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+			</article>
+			<article class="advantage-item">
+				<h3 class="advantage-item__header">Меняет мир вокруг</h3>
+				<p class="advantage-item__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+			</article>
+			<article class="advantage-item">
+				<h3 class="advantage-item__header">Заводит новых друзей</h3>
+				<p class="advantage-item__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+			</article>
+			<img class="advantages__img-iphone" src="iphone-hello" width="" height="" alt="">
+		</section>
+		<section class="reviews">
+            <input type="radio" id="slide-1" name="toggle" checked>
+            <input type="radio" id="slide-2" name="toggle">
+            <input type="radio" id="slide-3" name="toggle">
+            <div class="reviews__inner">
+                <div class="reviews__slides">
+                    <div class="reviews__slide">
+                        <h2 class="reviews__header">Николай Петров</h2>
+                        <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                    </div>
+                    <div class="reviews__slide">
+                        <h2 class="reviews__header">Николай Петров</h2>
+                        <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                    </div>
+                    <div class="reviews__slide">
+                        <h2 class="reviews__header">Николай Петров</h2>
+                        <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                    </div>
+                </div>
+            </div>
+            <div class="reviews__pagination"> 
+	            <label class="pagination-link" for="slide-1"></label>
+	            <label class="pagination-link" for="slide-2"></label>
+	            <label class="pagination-link" for="slide-3"></label>
+            </div>               
+        </section>
+        <section class="tariffs">
+            <input type="radio" id="slide-1" name="toggle">
+            <input type="radio" id="slide-2" name="toggle" checked>
+            <input type="radio" id="slide-3" name="toggle">
+            <div class="tariffs__inner">
+                <div class="tariffs__slides">
+                    <ul class="tariffs__slide">
+                        <li class="tariffs__title">
+                            <h3 class="tariffs__tariff-header-name">База</h3>
+                            <h2 class="tariffs__tariff-header-cost">1,99 USD</h2>
+                        </li>
+                        <li class="tariffs__tariff-item">
+                            <p>Розовый фильтр</p>
+                        </li>
+                        <li class="tariffs__tariff-item tariffs__tariff-item--not">
+                            <p>Смайлики</p>
+                        </li>
+                        <li class="tariffs__tariff-item tariffs__tariff-item--not">
+                            <p>Комментарии</p>
+                        </li>
+                    </ul>
+                    <ul class="tariffs__slide">
+                        <li class="tariffs__title">
+                        	<h3 class="tariffs__tariff-header-name">Стандарт</h3>
+                        	<h2 class="tariffs__tariff-header-cost">3,99 USD</h2>
+                        </li>
+                        <li class="tariffs__tariff-item">
+                        	<p>Розовый фильтр</p>
+                        </li>
+                        <li class="tariffs__tariff-item">
+                        	<p>Смайлики</p>
+                        </li>
+                        <li class="tariffs__tariff-item tariffs__tariff-item--not">
+                        	<p>Комментарии</p>
+                        </li>
+                    </ul>
+                    <ul class="tariffs__slide">
+                        <li class="tariffs__title">
+                            <h3 class="tariffs__tariff-header-name">Анлим</h3>
+                            <h2 class="tariffs__tariff-header-cost">9,99 USD</h2>
+                        </li>
+                        <li class="tariffs__tariff-item">
+                            <p>Розовый фильтр</p>
+                        </li>
+                        <li class="tariffs__tariff-item">
+                            <p>Смайлики</p>
+                        </li>
+                        <li class="tariffs__tariff-item">
+                            <p>Комментарии</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tariffs__pagination"> 
+	            <label class="pagination-link" for="slide-1"></label>
+	            <label class="pagination-link" for="slide-2"></label>
+	            <label class="pagination-link" for="slide-3"></label>
+            </div>               
+        </section>
+		<section class="contacts">
+			<h1 class="contacts__header">Остались вопросы? Свяжитесь с нами!</h1>
+			<div class="contacts__call-us">
+				<h3 class="contacts__item-header">Звоните:</h3>
+				<a class="phone" href="tel:+7 (812) 555-66-66"><h2 class="call-us__phone-text">+7 (812) 555-66-66</h2></a>
+			</div>
+			<div class="contacts__write-us">
+				<h3 class="contacts__item-header">Пишите:</h3>
+				<a class="mail" href="mailto:mail@htmlacademy.ru"><h2 class="contacts__item-text">mail@htmlacademy.ru</h2>
+			</div>
+			<div class="contacts__come-to-us">
+				<h3 class="contacts__item-header">Приезжайте в гости:</h3>
+				<h2 class="contacts__item-text">ул. Большая Конюшенная, 19/8</h2>
+			</div>
+		</section>
+		<div class="map">
+            <!--<iframe src="">
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн-курсе «<a href="https://htmlacademy.ru/advanced_intensive">Продвинутый HTML и CSS</a>».</p>
-
-    <!-- <script src="js/script.js"></script> -->
-
-  </body>
+            </iframe>-->      
+        </div>
+	</div>
+</body>
 </html>
