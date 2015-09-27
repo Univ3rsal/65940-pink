@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Pink - Форма</title>
+</head>
+<body>
+	<header class="page-header">
+		<a href="index.html" class="page-header__logo"></a>
+		<a href="#" class="main-nav__toggle  main-nav__toggle--closed">
+	</header>
+	<nav class="main-nav">
+		<ul class="main-nav__list">
+			<li class="main-nav__item"></li>
+			<li class="main-nav__item"><a href="#">Информация</a></li>
+			<li class="main-nav__item"><a href="#">Блог</a></li>
+			<li class="main-nav__item"><a href="#">Отзывы</a></li>
+			<li class="main-nav__item"><a href="#">Конкурс</a></li>
+		</ul>
+	</nav>
+	<div class="page-container">
+		<div class="challenge">
+			<h2 class="challenge__header">Конкурс на самое безбашеное путешествие с Пинк</h2>
+		</div>
+		<form class="challenge__form" action="echo" method="post">
+			<fieldset class="challenge__initials-form">
+				<p class="initials-form__header">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните</p>
+				<label class="field-header  field-header--red" for="name-field">Имя:*</label>
+				<input class="input-field" type="text" id="name-field" name="name" placeholder="Введите ваше имя">
+				<label class="field-header  field-header--red" for="surname-field">Фамилия:*</label>
+				<input class="input-field" type="text" id="surname-field" name="surname" placeholder="Введите ваше имя">
+				<label class="field-header  field-header--red" for="patronomyc-field">Отчество:*</label>
+				<input class="input-field" type="text" id="patronomyc-field" name="patronomyc" placeholder="Введите ваше имя">
+			</fieldset>
+			<fieldset class="challenge__os-type-form">
+				<p class="os-type-form__header">С каким приложением путешествовали?*</p>
+				<input class="radio-btn" type="radio" id="ios-check" name="ios" checked>
+				<label class="radio-btn-header" for="ios-check">Pink для iOS</label>
+				<input class="radio-btn" type="radio" id="android-check" name="android">
+				<label class="radio-btn-header" for="android-check">Pink на Android</label>
+				<input class="radio-btn" type="radio" id="winphone-check" name="winphone">
+				<label class="radio-btn-header" for="winphone-check">Windows Phone</label>
+			</fieldset>
+			<fieldset class="challenge__trip-form">
+				<p class="trip-form__header">Когда вы путешествовали?*</p>
+				<input class="input-field" type="text" id="date-out-field" name="date-out" value="1 апреля 2015">
+				<label class="field-header  field-header--red" for="date-out-field">Дата выезда</label>
+				<input class="input-field" type="text" id="duration-field" name="duration" value="10 дней">
+				<label class="field-header  field-header--red" for="date-out-field">Продолжительность</label>
+				<input class="input-field" type="text" id="date-back-field" name="date-back" value="1 апреля 2015" disabled>
+				<label class="field-header  field-header--red" for="date-back-field">Дата возвращения</label>
+			</fieldset>
+			<fieldset class="challenge__companions-count-form">
+				<label class="field-header  field-header--red" for="date-out-field">Количество попутчиков *</label>
+				<input class="input-field" type="text" id="companions-count-field" name="date-back" value="2 чел." disabled>
+				<div class="divider"></div>
+				<div class="companion-item">
+					<div class="companion-item__number">
+						<label class="field-header  field-header--red" for="№-field">№</label>
+						<input class="input-field" type="text" id="companion-number" value="1" disabled>
+					</div>
+					<div class="companion-item__name">
+						<label class="field-header  field-header--red" for="companion-name-field">Имя: *</label>
+						<input class="input-field" type="text" id="companion-name-field" name="companion-name" value="Введите ваше имя">
+					</div>
+					<div class="companion-item__nickname">
+						<label class="field-header  field-header--red" for="nickname-field">Прозвище:</label>
+						<input class="input-field" type="text" id="nickname-field" name="nickname" value="Ну как же без этого!">
+					</div>
+				</div>
+				<div class="companion-item">
+					<div class="companion-item__number">
+						<label class="field-header  field-header--red" for="№-field">№</label>
+						<input class="input-field" type="text" id="companion-number" value="2" disabled>
+					</div>
+					<div class="companion-item__name">
+						<label class="field-header  field-header--red" for="companion-name-field">Имя: *</label>
+						<input class="input-field" type="text" id="companion-name-field" name="companion-name" value="Введите ваше имя">
+					</div>
+					<div class="companion-item__nickname">
+						<label class="field-header field-header--red" for="nickname-field">Прозвище:</label>
+						<input class="input-field" type="text" id="nickname-field" name="nickname" value="Ну как же без этого!">
+					</div>
+				</div>
+			</fieldset>
+			<fieldset class="challenge__trip-achievments">
+				<p class="trip-achievments__header">Ваши безбашенные достижения в путешествии</p>
+				<input class="checkbox-btn" type="checkbox" id="shark-check" name="shark" checked>
+				<label class="checkbox-btn-header" for="shark-check">Сделал селфи с акулой</label>
+				<input class="checkbox-btn" type="checkbox" id="beach-check" name="beach">
+				<label class="checkbox-btn-header" for="beach-check">Обгорел на пляже</label>
+				<input class="checkbox-btn" type="checkbox" id="norris-check" name="norris">
+				<label class="checkbox-btn-header" for="norris-check">Видел Чака Норриса</label>
+				<input class="checkbox-btn" type="checkbox" id="souveniers-check" name="souveniers">
+				<label class="checkbox-btn-header" for="souveniers-check">Накупил сувениров</label>
+				<input class="checkbox-btn" type="checkbox" id="tower-check" name="tower">
+				<label class="checkbox-btn-header" for="tower-check">Удержал башню</label>
+				<input class="checkbox-btn" type="checkbox" id="hotel-check" name="hotel">
+				<label class="checkbox-btn-header" for="hotel-check">Разгромил отель</label>
+			</fieldset>
+		</form>
+		<section class="photo">
+			<p class="photo__header">ваши фотографии из поездки *</p>
+			<input class="input-field--hidden" type="file" name="file" id="file" class="inputfile">
+			<label class="photo__upload-photo-btn" for="file">Загрузить фото</label>
+			<div class="divider"></div>
+			<div class="photo__photo-item">
+				<img class="photo__photo-img" src="img-1.jpg" width="" height="" alt="">
+				<p class="photo__photo-name">img-1.jpg</p>
+			</div>
+			<div class="photo__photo-item">
+				<img class="photo__photo-img" src="img-2.jpg" width="" height="" alt="">
+				<p class="photo__photo-name">img-2.jpg</p>
+			</div>
+			<div class="photo__photo-item">
+				<img class="photo__photo-img" src="img-3.jpg" width="" height="" alt="">
+				<p class="photo__photo-name">img-3.jpg</p>
+			</div>
+			<div class="photo__photo-item">
+				<img class="photo__photo-img" src="img-4.jpg" width="" height="" alt="">
+				<p class="photo__photo-name">img-4.jpg</p>
+			</div>
+			<div class="photo__photo-item">
+				<img class="photo__photo-img" src="img-5.jpg" width="" height="" alt="">
+				<p class="photo__photo-name">img-5.jpg</p>
+			</div>
+			<div class="photo__photo-item">
+				<img class="photo__photo-img" src="img-6.jpg" width="" height="" alt="">
+				<p class="photo__photo-name">img-6.jpg</p>
+			</div>
+			<div class="photo__photo-item">
+				<img class="photo__photo-img" src="img-7.jpg" width="" height="" alt="">
+				<p class="photo__photo-name">img-7.jpg</p>
+			</div>
+			<div class="photo__photo-item">
+				<img class="photo__photo-img" src="img-8.jpg" width="" height="" alt="">
+				<p class="photo__photo-name">img-8.jpg</p>
+			</div>
+		</section>
+		<div class="send-form">
+			<input class="send-form__send-form-btn  green-btn" type="submit" value="Отправить форму">
+		</div>
+		<p class="bottom-note"><span>*</span>-обязательные поля</p>
+	</div>
+	<footer class="page-footer">
+		<a class="footer-logo" href="index.html">
+			<img class="footer-logo__logo-img-1" src="glasses" width="" height="" alt="">
+			<img class="footer-logo__logo-img-2" src="logo" width="" height="" alt="">
+		</a>
+		<div class="footer-social">
+			<ul class="social-links">
+				<li>
+					<a class="social-links__item-vk" href="#"></a>
+				</li>
+				<li>
+					<a class="social-links__item-fb" href="#"></a>
+				</li>
+				<li>
+					<a class="social-links__item-youtube" href="#"></a>
+				</li>
+			</ul>
+		</div>
+		<div class="footer-developer">
+			<p class="footer-developer__developer-text">Разработано</p>
+			<img class="footer-developer__developer-img" src="htmlacademy" width="" height="" alt="">
+		</div>
+	</footer>
+	<div class="success-popup">
+		<div class="success-popup-text-block">
+			<h3 class="success-popup-text-block__header">Ваша заявка отправлена</h3>
+			<p class="success-popup-text-block__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+		</div>
+		<button class="success-popup__btn  green-btn">закрыть окно</button>
+	</div>
+	<div class="failure-popup">
+		<h3 class="failure-popup__header">Что-то пошло не так!</h3>
+		<p class="failure-popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить.</p>
+		<button class="failure-popup__btn">Ок</button>
+	</div>
+</body>
+</html>
