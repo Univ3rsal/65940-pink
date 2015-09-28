@@ -1,0 +1,72 @@
+.main-nav {
+	display: none;
+	position: absolute;
+	top:0;
+
+
+	&--hidden {
+		display: block;
+	}
+
+
+	&__item {
+		list-style: none;
+		background-color: @top-menu-color;
+		border-top:1px solid #405361;
+		border-bottom:2px solid black;
+	}
+
+
+	&__item {
+		a {
+			display: block;
+			width: 280px;
+			padding: 22px 20px;
+			font-family: 'Open Sans', 'Arial', sans-serif;
+			font-size: 18px;
+			color:white;
+			text-decoration: none;
+			text-transform: uppercase;
+			text-align: center;
+		}
+	}
+
+
+	&__item--logo {
+		position: relative;
+		height: 23px;
+		padding: 22px 20px;
+		z-index: 999;
+	}
+
+
+	&__item--logo::before {
+		content: '';
+		display: block;
+		width: 74px;
+		height: 23px;
+		background: url('..img/logo.png') 0 0 no-repeat;
+	}
+
+
+	&__item--logo::after {
+		content: '';
+		position: absolute;
+		display: block;
+		right:20px;
+		top:22px;
+		width: 23px;
+		height: 23px;
+		background: url('..img/sprite-icons.png') -64px -5px no-repeat;
+		cursor: pointer;
+	}
+
+
+	&__toggle {
+		float: right;
+		width: 50px;
+		height: 25px;
+		background: url('..img/sprite-icons.png') 0 -5px no-repeat;
+		z-index: 1000;
+	}
+}
