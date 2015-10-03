@@ -1,0 +1,177 @@
+.competition {
+	
+	&-descr__text {
+		padding: 45px 20px 40px 20px;
+		text-align: center;
+	  	line-height: 30px;
+	  	font-size: 14px;
+	}
+	
+	&-forms{
+		padding:0;
+		margin:0;
+	}
+
+	&-initials {
+		display: block;
+		padding-bottom:40px;
+	}
+
+
+	&-os-type {
+		display: block;
+		padding-top:40px;
+		padding-bottom: 5px;
+		background-color: @light-grey;
+	}
+
+	&-os-type__header {
+		padding-bottom: 38px;
+		text-align: center;
+		text-transform: uppercase;
+	  	line-height: 18px;
+	  	font-size: 14px;
+	  	color:@red-pink;
+	}
+
+
+	&-trip {
+		padding-top:45px;
+		padding-bottom: 30px;
+
+
+		.field-title {
+			text-align: center;
+			margin-left: 0;
+			margin-bottom: 20px;
+		}
+
+		.field-input {
+			margin-bottom: 15px;
+		}
+	}
+
+	&-trip__header {
+		padding-bottom: 38px;
+		text-align: center;
+		text-transform: uppercase;
+	  	line-height: 18px;
+	  	font-size: 14px;
+	  	color:@red-pink;
+	}
+
+	
+
+	&-companions {
+		padding-top: 30px;
+		padding-bottom: 40px;
+		background-color: @light-grey;
+
+
+		>.field-title:first-child{
+			margin-left: 0;
+			margin-bottom: 30px;
+		}
+	}
+
+
+	&-companions__item {
+		margin-bottom: 40px;
+
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+
+	&-companions__item-number {
+		display: inline-block;
+	}
+
+
+	&-companions__item-name {
+		display: inline-block;
+		margin-bottom: 20px;
+	}
+
+
+	&-companions__item-nickname {
+		display: inline-block;
+		margin-left: 59px;
+	}
+
+
+	&-achievements {
+		padding-top: 50px;
+		padding-bottom: 45px;
+	}
+
+
+	&-achievements__header {
+		padding-bottom: 45px;
+		text-align: center;
+		text-transform: uppercase;
+	  	font-size: 14px;
+	  	color:@red-pink;
+	}
+
+
+	&-photo {
+		padding: 35px 20px 0px 20px;
+		margin-bottom: 50px;
+		background-color: @light-grey;
+
+			>.divider {
+				margin-top: 30px;
+			}
+
+
+			&__header {
+				padding-bottom: 35px;
+				text-align: center;
+				text-transform: uppercase;
+			  	font-size: 14px;
+			  	color:@red-pink;
+			}
+
+
+			&__item {
+				position: relative;
+				display: inline-block;
+				width: 67px;
+				height: 95px;
+				margin-right: 35px;
+				margin-bottom: 20px;
+
+
+				&:nth-child(3n+1) {
+					margin-right: 0px;
+				}
+
+
+				&::after{
+					content: '';
+					position: absolute;
+					display: block;
+					top:-16px;
+					right: -16px;
+					width: 33px;
+					height: 33px;
+					background: url('@{img-path}/sprite-icons.png') -212px 0px no-repeat;
+					cursor: pointer;
+				}
+			}
+
+
+			&__name {
+				font-size: 12px;
+				text-transform: uppercase;
+			}
+	}
+
+
+	&-send-form {
+		padding:0 20px;
+	}	
+}

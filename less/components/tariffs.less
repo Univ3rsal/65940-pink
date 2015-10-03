@@ -1,0 +1,131 @@
+.tariffs {
+	position: relative;
+	padding-top:86px;
+	padding-bottom: 46px;
+	overflow: hidden;
+	background-color:@light-grey;
+
+
+	&::before {
+		content: '';
+		position: absolute;
+		display: block;
+		height: 25px;
+		width: 320px;
+		top: 0;
+		background-image: -webkit-linear-gradient(to right bottom, white 50%, @light-grey 50%);
+		background-image: -o-linear-gradient(to right bottom, white 50%, @light-grey 50%);
+		background-image: linear-gradient(to right bottom, white 50%, @light-grey 50%);
+		z-index: 100;
+	}
+
+
+	&__inner {
+		width: 1200px;
+		margin-left: 20px;
+		margin-bottom: 35px;
+		transition-duration:.5s;
+	}
+
+
+	&__slide {
+		display: inline-block;
+		width: 280px;
+		vertical-align: top;
+		list-style: none;
+	}
+
+
+	&__title {
+		position: relative;
+		padding: 17px 0;
+		background: @dark-blue;
+		color:white;
+		text-transform: uppercase;
+		text-align: center;
+		overflow: hidden;
+		outline:1px solid @light-grey;
+	}
+
+
+	&__tariff-title-name {
+		line-height: 30px;
+	}
+
+
+	&__tariff-item {
+		position: relative;
+		padding: 21px 22px;
+		background-color: white;
+		font-size: 14px;
+		text-transform: uppercase;
+		outline:1px solid @light-grey;
+	}
+
+
+	&__tariff-item::before {
+		content: '';
+		position: absolute;
+		display: block;
+		top:50%;
+		right:22px;
+		width:26px;
+		height: 26px;
+		background: url('@{img-path}/sprite-icons.png') -100px -5px no-repeat;
+		transform:translateY(-50%);
+	}
+
+
+	&__tariff-item--not::before {
+		background: url('@{img-path}/sprite-icons.png') -143px -5px no-repeat;
+	}
+
+
+	&__title--hit::before {
+		content: 'ХИТ';
+		position: absolute;
+		display: block;
+		top:12px;
+		left:-30px;
+		width: 100px;
+		padding: 5px;
+		font-family: 'Open Sans', 'Arial', sans-serif;
+		font-size: 14px;
+		color:white;
+		background-color: @red-pink;
+		transform:rotate(-45deg);
+	}
+
+
+	&__pagination{
+		text-align: center;
+	}
+
+	
+	& .toggle-1:checked ~ &__inner {
+		transform:translateX(0px);
+	}
+
+
+	& .toggle-2:checked ~ &__inner {
+		transform:translateX(-284px);
+	}
+
+
+	& .toggle-3:checked ~ &__inner {
+		transform:translateX(-568px);
+	}
+
+
+	.toggle-1:checked ~ &__pagination .label-1,
+	.toggle-2:checked ~ &__pagination .label-2,
+	.toggle-3:checked ~ &__pagination .label-3 {
+		display: inline-block;
+		width: 6px;
+		height: 6px;
+		background-color: white;
+		border: 3px solid #1B3344;
+		border-radius: 6px;
+		cursor:pointer;
+	}
+}

@@ -1,0 +1,59 @@
+.app-download {
+	padding: 28px 20px;
+	background-color:@dark-blue;
+	text-align: center;
+
+
+	&__btn {
+		display: block;
+		padding:12px 20px;
+		margin-bottom: 32px;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 18px;
+		font-weight: @bold;
+		text-decoration: none;
+		text-align: center;
+		color:white;
+		border:3px solid white;
+		border-radius: 30px;
+	}
+
+
+	&__os-icon {
+		display: inline-block;
+		width: 60px;
+		height: 60px;
+		margin-right:15px;
+		margin-bottom: 15px;
+	}
+
+
+	&__os-icon:last-child {
+		margin-right:0px;
+	}
+
+
+	&__os-icon--apple {
+		background: url('@{img-path}/sprite-icons-os.png') 5px 0 no-repeat;
+	}
+
+
+	&__os-icon--android {
+		background: url('@{img-path}/sprite-icons-os.png') -62px 0 no-repeat;
+	}
+
+
+	&__os-icon--winphone {
+		background: url('@{img-path}/sprite-icons-os.png') -128px 2px no-repeat;
+	}
+
+
+	&__text {
+		display: block;
+		width: 280px;
+		font-size: 14px;
+		font-weight: @light;
+		line-height: 24px;
+		color:white;
+	}
+}
