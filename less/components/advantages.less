@@ -1,0 +1,67 @@
+.advantages {
+	&__promo {
+		padding: 40px 20px;
+	}
+
+
+	&__header {
+		display: block;
+		width: 280px;
+		margin-bottom: 30px;
+		text-align: center;
+		line-height: 28px;
+	}
+
+
+	&__header:last-child {
+		margin-bottom: 25px;
+	}
+
+
+	&__img {
+		height: 288px;
+		overflow: hidden;
+		text-align: center;
+		background-color: @light-grey;
+	}
+
+
+	&__img-iphone {
+		margin-top: 10px;
+	}
+}
+
+
+
+.advantage-item {
+	text-align: center;
+	background-color:@light-grey;
+
+
+	&:first-of-type::before {
+		content: '';
+		display: block;
+		height: 35px;
+		margin-top: -35px;
+		margin-bottom: 50px;
+		background-image: -webkit-linear-gradient(to right bottom, white 50%, @light-grey 50%);
+		background-image: -o-linear-gradient(to right bottom, white 50%, @light-grey 50%);
+		background-image: linear-gradient(to right bottom, white 50%, @light-grey 50%);
+	}
+
+
+	&__header {
+		padding:0 20px;
+		margin-bottom: 10px;
+	}
+
+
+	&__text {
+		padding:0 20px;
+		padding-bottom: 32px;
+		font-size: 14px;
+		font-weight: @regular;
+		line-height: 24px;
+	}
+
+}
