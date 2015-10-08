@@ -25,3 +25,45 @@
 		color:@red-pink;
 	}
 }
+
+
+@media (min-width: 700px) {
+
+
+.contacts {
+		position: relative;
+		padding-bottom: 0px;
+		.clearfix();
+
+		&__header {
+			padding: 0 80px;
+			margin-bottom: 40px;
+			font-size: 40px;
+		}
+
+		
+		&__item {
+			width: 300px;
+			padding: 0;
+		}
+
+
+		&__item:first-of-type {
+			float: left;
+			margin-left: 40px;
+		}
+		
+
+		&__item:nth-of-type(2) {
+			float: right;
+			margin-right: 40px;
+		}
+
+		&__item:last-of-type {
+			display: inline-block;
+			width: 280px;
+			margin-top:25px;
+			
+		}
+	}
+}

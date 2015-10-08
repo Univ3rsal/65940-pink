@@ -1,4 +1,5 @@
 .advantages {
+
 	&__promo {
 		padding: 40px 20px;
 	}
@@ -16,18 +17,31 @@
 	&__header:last-child {
 		margin-bottom: 25px;
 	}
+	
 
-
-	&__img {
-		height: 288px;
-		overflow: hidden;
-		text-align: center;
+	&__items {
 		background-color: @light-grey;
+	}
+
+	&__items::before {
+		content: '';
+		display: block;
+		height: 35px;
+		margin-top: -35px;
+		margin-bottom: 40px;
+		background-image: -webkit-linear-gradient(to right bottom, white 50%, @light-grey 50%);
+		background-image: -o-linear-gradient(to right bottom, white 50%, @light-grey 50%);
+		background-image: linear-gradient(to right bottom, white 50%, @light-grey 50%);
 	}
 
 
 	&__img-iphone {
+		display: block;
+		width: 158px;
+		height: 278px;
+		margin: @h-center;
 		margin-top: 10px;
+		background: url('@{img-path}/iphone-smile.png') 0 0 no-repeat;
 	}
 }
 
@@ -36,18 +50,6 @@
 .advantage-item {
 	text-align: center;
 	background-color:@light-grey;
-
-
-	&:first-of-type::before {
-		content: '';
-		display: block;
-		height: 35px;
-		margin-top: -35px;
-		margin-bottom: 50px;
-		background-image: -webkit-linear-gradient(to right bottom, white 50%, @light-grey 50%);
-		background-image: -o-linear-gradient(to right bottom, white 50%, @light-grey 50%);
-		background-image: linear-gradient(to right bottom, white 50%, @light-grey 50%);
-	}
 
 
 	&__header {
@@ -64,4 +66,68 @@
 		line-height: 24px;
 	}
 
+}
+
+
+@media (min-width: 700px) {
+
+
+	.advantages {
+		position: relative;
+
+		&__promo {
+			padding: 55px 40px;
+		}
+
+
+		&__header {
+			width: 620px;
+			margin:@h-center;
+			font-size: 40px;
+			line-height: 50px;
+		}
+
+
+		&__header:last-child {
+			width:340px;
+		}
+
+
+		&__img {
+			position: absolute;
+			bottom:0;
+			left:40px;
+		}
+
+
+		&__img-iphone {
+			display: block;
+			width: 268px;
+			height: 481px;
+			margin: @h-center;
+			margin-top: 10px;
+			background: url('@{img-path}/iphone-smile-m.png') 0 0 no-repeat;
+		}
+	}
+
+	.advantage-item {
+		width: 310px;
+		margin-left: 350px;
+		text-align: left;
+		
+
+		&__header {
+			padding: 0;
+		}
+
+
+		&__text {
+			padding: 0;
+			margin-bottom: 32px;
+		}
+
+		&:last-of-type {
+			padding-bottom: 15px;
+		}
+	}
 }

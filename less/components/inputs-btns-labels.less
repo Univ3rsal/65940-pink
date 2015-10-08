@@ -34,6 +34,8 @@
 	&--counter {
 		display: inline-block;
 		margin:@h-center;
+		padding: 0 10px;
+		height: 100%;
 		width: 106px;
 		vertical-align: top;
 		text-align: center;
@@ -181,14 +183,15 @@
 
 
 .input-plus-minus() {
+	
     &-minus{
-    position: relative;
-    display: inline-block;
-    width: 61px;
-    height: 60px;
-    vertical-align: top;
-    border:2px solid @dark-grey;
-    background-color: white;
+	    position: relative;
+	    display: inline-block;
+	    width: 61px;
+	    height: 100%;
+	    vertical-align: top;
+	    border:2px solid @dark-grey;
+	    background-color: white;
 
 
         &::before{
@@ -208,7 +211,7 @@
         position: relative;
         display: inline-block;
         width: 61px;
-        height: 60px;
+		height: 100%;
         vertical-align: top;
         border:2px solid @dark-grey;
         background-color: white;
@@ -239,4 +242,47 @@
             transform:translate(-50%,-50%);
         }
     }
+}
+
+
+.competition-companions__btn {
+	display: none;
+}
+
+
+@media (min-width: 700px) {
+
+
+	.upload-btn {
+		width: 455px;
+	}
+
+
+	.send-form-btn {
+		display: inline-block;
+		width: 300px;
+		margin-right: 125px;
+	}
+
+
+	.competition-companions__btn {
+			position: absolute;
+			right: 0;
+			top:50px;
+			font-family: 'Open Sans', 'Arial', sans-serif;
+			font-size: 14px;
+			text-transform: uppercase;
+			background: none;
+			border: none;
+		}
+
+
+	.field-input--counter {
+		width: 80px;
+	}
+
+
+	.field-input--stretch {
+		width: 578px;
+	}
 }

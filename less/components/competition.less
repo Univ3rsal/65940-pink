@@ -14,6 +14,7 @@
 
 	&-initials {
 		display: block;
+		padding: 0 20px;
 		padding-bottom:40px;
 	}
 
@@ -21,19 +22,9 @@
 	&-os-type {
 		display: block;
 		padding-top:40px;
-		padding-bottom: 5px;
+		padding-bottom: 20px;
 		background-color: @light-grey;
 	}
-
-	&-os-type__header {
-		padding-bottom: 38px;
-		text-align: center;
-		text-transform: uppercase;
-	  	line-height: 18px;
-	  	font-size: 14px;
-	  	color:@red-pink;
-	}
-
 
 	&-trip {
 		padding-top:45px;
@@ -51,15 +42,16 @@
 		}
 	}
 
-	&-trip__header {
-		padding-bottom: 38px;
-		text-align: center;
-		text-transform: uppercase;
-	  	line-height: 18px;
-	  	font-size: 14px;
-	  	color:@red-pink;
-	}
+	&__counter{
+		width: 280px;
+		height: 60px;
+		margin-bottom: 15px;
 
+		.field-input {
+			width: 125px;
+
+		}
+	}
 	
 
 	&-companions {
@@ -68,37 +60,31 @@
 		background-color: @light-grey;
 
 
-		>.field-title:first-child{
-			margin-left: 0;
-			margin-bottom: 30px;
+		&__item {
+			margin-bottom: 40px;
+
+
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
-	}
 
-
-	&-companions__item {
-		margin-bottom: 40px;
-
-
-		&:last-child {
-			margin-bottom: 0;
+		
+		&__item-number {
+			display: inline-block;
 		}
-	}
 
 
-	&-companions__item-number {
-		display: inline-block;
-	}
+		&__item-name {
+			display: inline-block;
+			margin-bottom: 20px;
+		}
 
-
-	&-companions__item-name {
-		display: inline-block;
-		margin-bottom: 20px;
-	}
-
-
-	&-companions__item-nickname {
-		display: inline-block;
-		margin-left: 59px;
+		
+		&__item-nickname {
+			display: inline-block;
+			margin-left: 59px;
+		}
 	}
 
 
@@ -108,17 +94,8 @@
 	}
 
 
-	&-achievements__header {
-		padding-bottom: 45px;
-		text-align: center;
-		text-transform: uppercase;
-	  	font-size: 14px;
-	  	color:@red-pink;
-	}
-
-
 	&-photo {
-		padding: 35px 20px 0px 20px;
+		padding-top: 35px;
 		margin-bottom: 50px;
 		background-color: @light-grey;
 
@@ -127,25 +104,16 @@
 			}
 
 
-			&__header {
-				padding-bottom: 35px;
-				text-align: center;
-				text-transform: uppercase;
-			  	font-size: 14px;
-			  	color:@red-pink;
-			}
-
-
 			&__item {
 				position: relative;
 				display: inline-block;
 				width: 67px;
-				height: 95px;
-				margin-right: 35px;
+				height: auto;
+				margin-right: 39px;
 				margin-bottom: 20px;
 
 
-				&:nth-child(3n+1) {
+				&:nth-of-type(3n+1) {
 					margin-right: 0px;
 				}
 
@@ -170,8 +138,148 @@
 			}
 	}
 
+}
 
-	&-send-form {
-		padding:0 20px;
-	}	
+
+
+@media (min-width: 700px) {
+
+	.competition {
+		
+		&-descr__text {
+			padding: 90px 70px 40px 70px;
+			text-align: center;
+	  		line-height: 30px;
+	  		font-size: 18px;
+		}
+
+
+		&-initials {
+			padding: 0 40px;
+			margin-bottom: 60px;
+		}
+
+
+		&-os-type {
+			background: none;
+		}
+		
+
+		&-trip {
+			position: relative;
+			padding-top:30px;
+			padding-bottom: 35px;
+
+			.field-input {
+				width: 195px;
+			}
+
+			.field-title {
+				text-align: left;
+				margin-left: 20px;
+				margin-bottom: 0px;
+			}
+		}
+		
+		&__date-out-block {
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 13px;
+			margin-bottom: 30px;
+		}
+
+		&__counter-block {
+			display: inline-block;
+			vertical-align: top;
+			margin-bottom: 30px;
+		}
+
+		&__date-back-block {
+			display: inline-block;
+		}
+
+
+		&__counter {
+			width: 240px;
+			margin-bottom: 18px;
+
+			.field-input {
+				width: 86px;
+			}
+ 		}
+
+
+ 		&-companions {
+ 			background-color: white;
+
+ 			&__item {
+				position: relative;
+ 			}
+ 			
+
+			&__item-number {
+				margin-right: 20px;
+			}
+			
+			
+			&__item-nickname {
+				margin-left: 80px;
+			}
+
+			
+			.field-input--companion-name,
+			.field-input--companion-nickname {
+				width: 260px;
+			}
+ 		}
+
+
+ 		&-photo {
+			background: none;
+
+
+ 			>.divider {
+				margin-top: 40px;
+				margin-bottom: 65px;
+			}
+ 		}
+
+
+
+		&-photo__item {
+			width: 120px;
+			height: auto;
+			margin-right: 68px;
+			margin-bottom: 50px;
+
+
+				&:nth-of-type(3n+1) {
+					margin-right: 0px;
+				}
+		}
+		
+
+		&-photo__img {
+			margin-bottom: 8px;
+		}
+
+
+		&-photo__name {
+				font-size: 14px;
+			}
+
+
+		&-send-form {
+			position: relative;
+			margin: 0 40px;
+			margin-top: 65px;
+			margin-bottom: 60px;
+		}
+
+
+		&__fieldset-header {
+			display: none;
+		}
+
+	}
 }
