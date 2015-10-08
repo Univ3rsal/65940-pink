@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Pink - Форма</title>
 	<link rel="stylesheet" href="css/style.css">
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<div class="wrapper">
@@ -23,22 +23,23 @@
     	</header>
 		<div class="page-container">
 			<div class="promo">
-				<h2 class="promo__header">Конкурс на самое безбашеное путешествие с Пинк</h2>
+				<h2 class="promo__header">Конкурс на самое безбашенное путешествие с Пинк</h2>
 			</div>
 			<div class="competition-descr">
-				<p class="competition-descr__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+				<p class="competition-descr__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
 			</div>
 			<form class="competition-forms" action="echo" method="post">
-				<fieldset class="competition-initials">
+				<section class="competition-initials">
 					<label class="field-title  field-title--color" for="name-field">Имя:*</label>
-					<input class="field-input" type="text" id="name-field" name="name" placeholder="Введите ваше имя" required>
+					<input class="field-input  field-input--stretch" type="text" id="name-field" name="name" placeholder="Введите ваше имя" required>
 					<label class="field-title  field-title--color" for="surname-field">Фамилия:*</label>
-					<input class="field-input" type="text" id="surname-field" name="surname" placeholder="Укажите фамилию" required>
+					<input class="field-input  field-input--stretch" type="text" id="surname-field" name="surname" placeholder="Укажите фамилию" required>
 					<label class="field-title  field-title--color" for="patronomyc-field">Отчество:</label>
-					<input class="field-input" type="text" id="patronomyc-field" name="patronomyc" placeholder="Ну и отчество тоже">
-				</fieldset>
-				<fieldset class="competition-os-type  competition-os-type--colored">
-					<p class="competition-os-type__header">С каким приложением путешествовали?*</p>
+					<input class="field-input  field-input--stretch" type="text" id="patronomyc-field" name="patronomyc" placeholder="Ну и отчество тоже">
+				</section>
+				<fieldset class="competition-os-type">
+					<legend>С каким приложением путешествовали?*</legend>
+					<p class="competition__fieldset-header">С каким приложением путешествовали?*</p>
 					<input class="radio-btn" type="radio" id="ios-check" name="os-type" checked>
 					<label class="radio-btn-title" for="ios-check">Pink для iOS</label>
 					<input class="radio-btn" type="radio" id="android-check" name="os-type">
@@ -47,58 +48,68 @@
 					<label class="radio-btn-title" for="winphone-check">Windows Phone</label>
 				</fieldset>
 				<fieldset class="competition-trip">
-					<p class="competition-trip__header">Когда вы путешествовали?*</p>
-					<input class="field-input" type="text" id="date-out-field" name="date-out" value="1 апреля 2015">
-					<label class="field-title  field-title--color  field-title--center" for="date-out-field">Дата выезда</label>
-					<div class="competition__counter">
-						<div class="field-input--counter-minus"></div><!--
-						--><input class="field-input  field-input--counter" type="text" value="10 дней"><!--
-						--><div class="field-input--counter-plus"></div>
+					<legend>Когда вы путешествовали?*</legend>
+					<p class="competition__fieldset-header">Когда вы путешествовали?*</p>
+					<div class="competition__date-out-block">
+						<input class="field-input" type="text" id="date-out-field" name="date-out" value="1 апреля 2015" required>
+						<label class="field-title  field-title--color  field-title--center" for="date-out-field">Дата выезда</label>
 					</div>
-					<label class="field-title  field-title--color  field-title--center" for="date-out-field">Продолжительность</label>
-					<input class="field-input" type="text" id="date-back-field" name="date-back" value="1 апреля 2015" disabled>
-					<label class="field-title  field-title--color  field-title--center" for="date-back-field">Дата возвращения</label>
+					<div class="competition__counter-block">
+						<div class="competition__counter">
+							<div class="field-input--counter-minus"></div><!--
+							--><input class="field-input  field-input--counter" type="text" value="10 дней" required><!--
+							--><div class="field-input--counter-plus"></div>
+						</div>
+						<label class="field-title  field-title--color  field-title--center">Продолжительность</label>
+					</div>
+					<div class="competition__date-back-block">
+						<input class="field-input" type="text" id="date-back-field" name="date-back" value="1 апреля 2015" disabled>
+						<label class="field-title  field-title--color  field-title--center" for="date-back-field">Дата возвращения</label>
+					</div>
 				</fieldset>
 				<fieldset class="competition-companions">
-					<label class="field-title  field-title--color  field-title--center" for="date-out-field">Количество попутчиков *</label>
-					<div class="competition-companions__counter">
+					<legend>Количество попутчиков *</legend>
+					<p class="competition__fieldset-header">Количество попутчиков *</p>
+					<div class="competition__counter">
 						<div class="field-input--counter-minus"></div><!--
-						--><input class="field-input  field-input--counter" type="text" value="2 чел" disabled><!--
+						--><input class="field-input  field-input--counter" type="text" value="2 чел" required><!--
 						--><div class="field-input--counter-plus"></div>
 					</div>
 					<div class="divider"></div>
 					<div class="competition-companions__item">
 						<div class="competition-companions__item-number">
-							<label class="field-title  field-title--color" for="№-field">№</label>
+							<label class="field-title  field-title--color">№</label>
 							<input class="field-input  field-input--companion-number" type="text" id="companion-number" value="1" disabled>
 						</div><!--
 					--><div class="competition-companions__item-name">
-							<label class="field-title  field-title--color" for="companion-name-field">Имя: *</label>
-							<input class="field-input  field-input--companion-name" type="text" id="companion-name-field" name="companion-name" placeholder="Введите ваше имя">
+							<label class="field-title  field-title--color" for="companion-name">Имя: *</label>
+							<input class="field-input  field-input--companion-name" type="text" id="companion-name" name="companion-name" placeholder="Введите ваше имя" required>
 						</div>
+						<button class="competition-companions__btn">Удалить</button>
 						<div class="competition-companions__item-nickname">
-							<label class="field-title  field-title--color" for="nickname-field">Прозвище:</label>
-							<input class="field-input  field-input--companion-nickname" type="text" id="nickname-field" name="nickname" placeholder="Ну как же без этого!">
+							<label class="field-title  field-title--color" for="companion-nickname">Прозвище:</label>
+							<input class="field-input  field-input--companion-nickname" type="text" id="companion-nickname" name="nickname" placeholder="Ну как же без этого!">
 						</div>
 					</div>
 					<div class="competition-companions__item">
 						<div class="competition-companions__item-number">
-							<label class="field-title  field-title--color" for="№-field">№</label>
+							<label class="field-title  field-title--color">№</label>
 							<input class="field-input  field-input--companion-number" type="text" id="companion-number" value="2" disabled>
 						</div><!--
 					--><div class="competition-companions__item-name">
-							<label class="field-title  field-title--color" for="companion-name-field">Имя: *</label>
-							<input class="field-input  field-input--companion-name" type="text" id="companion-name-field" name="companion-name" placeholder="Введите ваше имя">
+							<label class="field-title  field-title--color" for="companion-name">Имя: *</label>
+							<input class="field-input  field-input--companion-name" type="text" id="companion-name" name="companion-name" placeholder="Введите ваше имя" required>
 						</div>
+						<button class="competition-companions__btn">Удалить</button>
 						<div class="competition-companions__item-nickname">
-							<label class="field-title  field-title--color" for="nickname-field">Прозвище:</label>
-							<input class="field-input  field-input--companion-nickname" type="text" id="nickname-field" name="nickname" placeholder="Ну как же без этого!">
+							<label class="field-title  field-title--color" for="companion-nickname">Прозвище:</label>
+							<input class="field-input  field-input--companion-nickname" type="text" id="companion-nickname" name="nickname" placeholder="Ну как же без этого!">
 						</div>
-					</div>
-					
+					</div>	
 				</fieldset>
 				<fieldset class="competition-achievements">
-					<p class="competition-achievements__header">Ваши безбашенные достижения в путешествии</p>
+					<legend>Ваши безбашенные достижения в путешествии</legend>
+					<p class="competition__fieldset-header">Ваши безбашенные достижения в путешествии</p>
 					<input class="checkbox-btn" type="checkbox" id="shark-check" name="shark" checked>
 					<label class="checkbox-btn-title" for="shark-check">Сделал селфи с акулой</label>
 					<input class="checkbox-btn" type="checkbox" id="beach-check" name="beach" checked>
@@ -112,49 +123,75 @@
 					<input class="checkbox-btn" type="checkbox" id="hotel-check" name="hotel">
 					<label class="checkbox-btn-title" for="hotel-check">Разгромил отель</label>
 				</fieldset>
+				<fieldset class="competition-photo">
+					<legend>ваши фотографии из поездки *</legend>
+					<p class="competition__fieldset-header">ваши фотографии из поездки *</p>
+					<input class="field-input--hidden" type="file" name="file" id="file" class="inputfile">
+					<label class="upload-btn" for="file">Загрузить фото</label>
+					<div class="divider"></div>
+					<div class="competition-photo__item">
+						<picture>
+							<source media="(min-width:700px)" srcset="img/photo-1-m.jpg">
+							<img class="competition-photo__img" src="img/photo-1.jpg" alt="photo">
+						</picture>
+						<p class="competition-photo__name">img-1.jpg</p>
+					</div><!--
+					--><div class="competition-photo__item">
+						<picture>
+							<source media="(min-width:700px)" srcset="img/photo-2-m.jpg">
+							<img class="competition-photo__img" src="img/photo-2.jpg" alt="photo">
+						</picture>
+						<p class="competition-photo__name">img-2.jpg</p>
+					</div><!--
+					--><div class="competition-photo__item">
+						<picture>
+							<source media="(min-width:700px)" srcset="img/photo-3-m.jpg">
+							<img class="competition-photo__img" src="img/photo-3.jpg" alt="photo">
+						</picture>
+						<p class="competition-photo__name">img-3.jpg</p>
+					</div><!--
+					--><div class="competition-photo__item">
+						<picture>
+							<source media="(min-width:700px)" srcset="img/photo-4-m.jpg">
+							<img class="competition-photo__img" src="img/photo-4.jpg" alt="photo">
+						</picture>
+						<p class="competition-photo__name">img-4.jpg</p>
+					</div><!--
+					--><div class="competition-photo__item">
+						<picture>
+							<source media="(min-width:700px)" srcset="img/photo-5-m.jpg">
+							<img class="competition-photo__img" src="img/photo-5.jpg" alt="photo">
+						</picture>
+						<p class="competition-photo__name">img-5.jpg</p>
+					</div><!--
+					--><div class="competition-photo__item">
+						<picture>
+							<source media="(min-width:700px)" srcset="img/photo-6-m.jpg">
+							<img class="competition-photo__img" src="img/photo-6.jpg" alt="photo">
+						</picture>
+						<p class="competition-photo__name">img-6.jpg</p>
+					</div><!--
+					--><div class="competition-photo__item">
+						<picture>
+							<source media="(min-width:700px)" srcset="img/photo-7-m.jpg">
+							<img class="competition-photo__img" src="img/photo-7.jpg" alt="photo">
+						</picture>
+						<p class="competition-photo__name">img-7.jpg</p>
+					</div><!--
+					--><div class="competition-photo__item">
+						<picture>
+							<source media="(min-width:700px)" srcset="img/photo-8-m.jpg">
+							<img class="competition-photo__img" src="img/photo-8.jpg" alt="photo">
+						</picture>
+						<p class="competition-photo__name">img-8.jpg</p>
+					</div>
+				</fieldset>
+				<div class="competition-send-form">
+					<input class="main-btn  send-form-btn" type="submit" value="Отправить форму">
+					<p class="bottom-note"><span>*</span> — обязательные поля</p>
+				</div>
 			</form>
-			<section class="competition-photo">
-				<p class="competition-photo__header">ваши фотографии из поездки *</p>
-				<input class="field-input--hidden" type="file" name="file" id="file" class="inputfile">
-				<label class="upload-btn" for="file">Загрузить фото</label>
-				<div class="divider"></div>
-				<div class="competition-photo__item">
-					<img class="competition-photo__img" src="img/photo-1.jpg" width="67" height="68" alt="photo">
-					<p class="competition-photo__name">img-1.jpg</p>
-				</div>
-				<div class="competition-photo__item">
-					<img class="competition-photo__img" src="img/photo-2.jpg" width="67" height="68" alt="photo">
-					<p class="competition-photo__name">img-2.jpg</p>
-				</div>
-				<div class="competition-photo__item">
-					<img class="competition-photo__img" src="img/photo-3.jpg" width="67" height="68" alt="photo">
-					<p class="competition-photo__name">img-3.jpg</p>
-				</div>
-				<div class="competition-photo__item">
-					<img class="competition-photo__img" src="img/photo-4.jpg" width="67" height="68" alt="photo">
-					<p class="competition-photo__name">img-4.jpg</p>
-				</div>
-				<div class="competition-photo__item">
-					<img class="competition-photo__img" src="img/photo-5.jpg" width="67" height="68" alt="photo">
-					<p class="competition-photo__name">img-5.jpg</p>
-				</div>
-				<div class="competition-photo__item">
-					<img class="competition-photo__img" src="img/photo-6.jpg" width="67" height="68" alt="photo">
-					<p class="competition-photo__name">img-6.jpg</p>
-				</div>
-				<div class="competition-photo__item">
-					<img class="competition-photo__img" src="img/photo-7.jpg" width="67" height="68" alt="photo">
-					<p class="competition-photo__name">img-7.jpg</p>
-				</div>
-				<div class="competition-photo__item">
-					<img class="competition-photo__img" src="img/photo-8.jpg" width="67" height="68" alt="photo">
-					<p class="competition-photo__name">img-8.jpg</p>
-				</div>
-			</section>
-			<div class="competition-send-form">
-				<input class="main-btn" type="submit" value="Отправить форму">
-			</div>
-			<p class="bottom-note"><span>*</span> — обязательные поля</p>
+			
 		</div>
 		<footer class="page-footer">
 			<a class="page-footer__logo" href="index.html">
@@ -195,5 +232,6 @@
 			<button class="main-btn">Ок</button>
 		</div>
 	</div>
+	<script src="js/picturefill.js"></script>
 </body>
 </html>

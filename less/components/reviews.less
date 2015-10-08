@@ -3,9 +3,8 @@
 	padding: 45px 0;
 	overflow: hidden;
 
-
 	&__header {
-		padding-bottom: 15px;
+		margin-bottom: 15px;
 	}
 
 
@@ -62,5 +61,61 @@
 
 	.toggle-3:checked ~ &__inner {
 		transform:translateX(-648px);
+	}
+}
+
+
+@media (min-width: 700px) {
+
+
+	.reviews {
+		padding: 0;
+		padding-top: 20px;
+		padding-bottom: 22px;
+
+		&__inner {
+			width:2150px;
+		}
+
+
+		&__slide {
+			float: left;
+			display: flex;
+			flex-direction: column;
+			width: 620px;
+			padding:0 40px;
+		}
+		
+
+		&__header {
+			margin-bottom: 8px;
+			font-size: 20px;
+			order:2;
+		}
+
+
+		&__text {
+			order:1;
+			padding-bottom: 38px;
+			font-size: 18px;
+			line-height: 30px;
+		}
+
+
+		&__reviewer-about {
+			margin-bottom: 30px;
+			font-size: 14px;
+			order:3;
+		}
+
+
+		.toggle-2:checked ~ &__inner {
+			transform:translateX(-700px);
+		}
+
+
+		.toggle-3:checked ~ &__inner {
+			transform:translateX(-1400px);
+		}
 	}
 }

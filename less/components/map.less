@@ -29,3 +29,26 @@
 		transform: translateX(-50%);
 	}
 }
+
+
+@media (min-width: 700px) {
+
+	.map {
+		width: 700px;
+		height: 382px;
+		background: url('@{img-path}/map-m.jpg') 0 0 no-repeat;
+		overflow: hidden;
+
+
+		&::before {
+			border: 350px solid transparent;
+			border-top: 75px solid white;
+			outline: 2px solid red;
+		}
+
+
+		&::after {
+			top: 200px;
+		}
+	}   
+}
