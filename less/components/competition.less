@@ -16,6 +16,11 @@
 		display: block;
 		padding: 0 20px;
 		padding-bottom:40px;
+
+
+		&__item {
+			margin-bottom: 22px;
+		}
 	}
 
 
@@ -72,6 +77,10 @@
 		
 		&__item-number {
 			display: inline-block;
+
+			.field-input:hover {
+				border-color: @dark-grey;
+			}
 		}
 
 
@@ -89,8 +98,17 @@
 
 
 	&-achievements {
-		padding-top: 50px;
+		padding-top: 45px;
 		padding-bottom: 45px;
+
+		&__items-block {
+			margin-bottom: 45px;
+
+
+			&:last-of-type {
+				margin-bottom: 0px;
+			}
+		}
 	}
 
 
@@ -99,45 +117,103 @@
 		margin-bottom: 50px;
 		background-color: @light-grey;
 
-			>.divider {
-				margin-top: 30px;
+		>.divider {
+			margin-top: 30px;
+		}
+
+
+		&__item {
+			position: relative;
+			display: inline-block;
+			width: 67px;
+			height: auto;
+			margin-right: 39px;
+			margin-bottom: 20px;
+			vertical-align: top;
+
+
+			&:nth-of-type(3n+1) {
+				margin-right: 0px;
+			}				
+		}
+
+
+		&__name {
+			font-size: 12px;
+			text-transform: uppercase;
+		}
+
+
+		&__delete {
+			position: absolute;
+			display: block;
+			top:-16px;
+			right: -16px;
+			width: 27px;
+			height: 27px;
+			border: 2px solid #c1c1c1;
+			border-radius: 20px;
+			background: white;
+			cursor: pointer;
+			z-index: 92;
+
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				width: 15px;
+				height: 2px;
+				background: #c1c1c1;
+				left: 6px;
+				transform: translateY(-50%) rotate(45deg);
 			}
 
 
-			&__item {
-				position: relative;
-				display: inline-block;
-				width: 67px;
-				height: auto;
-				margin-right: 39px;
-				margin-bottom: 20px;
-
-
-				&:nth-of-type(3n+1) {
-					margin-right: 0px;
-				}
-
-
-				&::after{
-					content: '';
-					position: absolute;
-					display: block;
-					top:-16px;
-					right: -16px;
-					width: 33px;
-					height: 33px;
-					background: url('@{img-path}/sprite-icons.png') -212px 0px no-repeat;
-					cursor: pointer;
-				}
+			&::after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				width: 15px;
+				height: 2px;
+				background: #c1c1c1;
+				right: 6px;
+				transform: translateY(-50%) rotate(-45deg);
 			}
 
 
-			&__name {
-				font-size: 12px;
-				text-transform: uppercase;
+			&:hover {
+				border-color: #283645;
 			}
+
+
+			&:hover:after,
+			&:hover:before {
+				background: #283645;
+			}
+
+
+			&:active {
+				background: #283645;
+			}
+
+			
+			&:active:after,
+			&:active:before {
+				background: white;
+			}
+		}
 	}
 
+
+	&__fieldset-header {
+	    padding-bottom: 38px;
+	    text-align: center;
+	    text-transform: uppercase;
+	    line-height: 18px;
+	    font-size: 14px;
+	    color:@red-pink;
+	}
 }
 
 
@@ -181,29 +257,32 @@
 			}
 		}
 		
-		&__date-out-block {
+
+		&__date-out-item {
 			display: inline-block;
 			vertical-align: top;
 			margin-right: 13px;
 			margin-bottom: 30px;
 		}
 
-		&__counter-block {
+
+		&__counter-item {
 			display: inline-block;
 			vertical-align: top;
 			margin-bottom: 30px;
 		}
 
-		&__date-back-block {
+
+		&__date-back-item {
 			display: inline-block;
 		}
 
 
 		&__counter {
-			width: 240px;
+			width: auto;
 			margin-bottom: 18px;
 
-			.field-input {
+			.field-input--counter {
 				width: 86px;
 			}
  		}
@@ -242,6 +321,26 @@
 				margin-top: 40px;
 				margin-bottom: 65px;
 			}
+
+
+			&__delete {
+				top:-20px;
+				right: -16px;
+				width: 33px;
+				height: 33px;
+
+
+				&::before {
+					width: 21px;
+					height: 2px;
+				}
+
+
+				&::after {
+					width: 21px;
+					height: 2px;
+				}
+			}
  		}
 
 
@@ -265,8 +364,8 @@
 
 
 		&-photo__name {
-				font-size: 14px;
-			}
+			font-size: 14px;
+		}
 
 
 		&-send-form {
@@ -281,5 +380,139 @@
 			display: none;
 		}
 
+	}
+}
+
+
+@media (min-width: 1200px) {
+
+	.competition {
+		
+		&-descr__text {
+			padding-bottom: 70px;
+			padding-left: 210px;
+			padding-right: 210px;
+		}
+
+
+		&-initials {
+			padding: 0 130px;
+			margin-bottom: 55px;
+
+
+			&__item {
+				display: inline-block;
+				margin-right: 23px;
+				margin-bottom: 0px;
+				vertical-align: top;
+
+
+				&:last-child {
+					margin-right: 0px;
+				}
+			}
+		}
+
+
+		&__os-type-item {
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 107px;
+
+
+			&:last-child {
+				margin-right: 0px;
+			}
+		}
+
+
+		&-trip {
+			padding-bottom: 16px;
+		}
+
+		
+		&__date-out-item {
+			margin-right: 39px;
+			margin-bottom: 0px;
+		}
+
+
+		&__counter-item {
+			margin-bottom: 0px;
+			margin-right: 38px;
+		}
+
+
+		&__counter {
+			width: auto;
+
+
+			.field-input--counter {
+				width: 100px;
+			}
+ 		}
+		
+
+		&-companions {
+			
+			&__item {
+				margin-bottom: 0px;
+			}
+
+
+	 		&__item-name {
+	 			margin-right: 20px;
+	 		}
+
+
+	 		&__item-nickname {
+	 			margin-left: 0px;
+	 		}
+		}
+
+
+		&-achievements {
+			padding-bottom: 57px;
+
+
+			&__items-block {
+				display: inline-block;
+				width: 265px;
+				margin-right: 34px;
+				margin-bottom: 0px;
+				vertical-align: top;
+
+
+				&:last-child {
+					width: 210px;
+					margin-right: 0px;
+				}
+			}	
+		}
+
+
+		&-photo {
+			padding-bottom: 28px;
+
+			&__item {
+				margin-right: 54px;
+				margin-bottom: 27px;
+
+				&:nth-of-type(3n+1) {
+					margin-right: 54px;
+				}
+
+				&:nth-of-type(5n+1) {
+					margin-right: 0px;
+				}
+			}
+		}
+		
+
+		&-send-form {
+			margin: 0 130px;
+			margin-top: 65px;
+			margin-bottom: 60px;
+		}
 	}
 }

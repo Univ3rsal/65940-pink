@@ -1,5 +1,6 @@
 .promo {
-    background: url('@{img-path}/bg-photo-mobile.jpg') 0 0 no-repeat;
+    background: url('@{img-path}/background-mobile@1x.jpg') -200px 0 no-repeat;
+    background-size: 700px auto;
     overflow: hidden;
     
 
@@ -31,9 +32,6 @@
 
     .promo__img-iphone {
         display: block;
-        width: 257px;
-        height: 313px;
-        background: url('@{img-path}/iphone-hand-mobile.png') 0 0 no-repeat;
     }
 }
 
@@ -56,20 +54,18 @@
 
         }
 
+
         .promo__img-iphone {
             position: absolute;
             bottom:0;
-            right: 40px;
-            width: 474px;
-            height: 545px;
-            background: url('@{img-path}/iphone-hand-tablet@1x.png') -185px 0 no-repeat;
+            right: 0px;
         }
     }
 
 
     .promo {
-        background: url('@{img-path}/bg-photo-tablet@1x.jpg') -250px 0 no-repeat;
-        background-size: 1200px 730px;
+        background: url('@{img-path}/background-tablet@1x.jpg') -250px 0 no-repeat;
+        background-size: 1200px auto;
 
 
         &__header {
@@ -81,3 +77,67 @@
         }
     }
 }
+
+
+@media (min-width: 1200px) {
+    
+
+    .promo {
+        margin:@h-center;
+        background: url('@{img-path}/background-tablet@2x.jpg') 0 0 no-repeat;
+        background-size: 1200px 854px;
+
+
+        &__header {
+            width: 940px;
+            margin-bottom: 100px;
+        }
+    }
+
+
+    .promo-index {
+        height: 853px;
+
+
+         .promo__header {
+            width: 250px;
+            margin-top:220px;
+            margin-left: 155px;
+            font-size: 50px;
+            line-height: 58px;
+         }
+
+
+         .promo__img-iphone {
+            right: 0px;
+        }
+    }
+
+
+}
+
+
+@media (max-width: 700px) and (min-resolution: 1.5dppx) {
+    .promo {
+        background: url('@{img-path}/background-mobile@2x.jpg') -200px 0;
+        background-size: 700px auto;
+    }
+}
+
+
+@media (max-width: 1200px) and (min-resolution: 1.5dppx) {
+    .promo {
+        background: url('@{img-path}/background-tablet@2x.jpg') -250px 0 no-repeat;
+        background-size: 1200px auto;
+    }
+}
+
+@media (min-width: 1200px) and (min-resolution: 1.5dppx) {
+    .promo {
+        margin:@h-center;
+        background: url('@{img-path}/background-fullsize.jpg') 0 0 no-repeat;
+        background-size: 1200px 854px;
+    }
+}
+
+

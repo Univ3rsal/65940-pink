@@ -40,6 +40,8 @@
 
 
 		&__header {
+			display: block;
+			width: 170px;
 			margin-bottom: 15px;
 			font-weight: 700;
 			font-size: 30px;
@@ -58,4 +60,57 @@
 			color: @red-pink;
 		}
 	}
+}
+
+
+@media (min-width: 1200px) {
+
+	.effect {
+		padding: 50px 130px;
+		background-color: @light-grey;
+
+
+		&__img {
+        	width: 301px;
+        	height: 346px;
+        	margin-right: 60px;
+    	}
+
+
+    	&__img-fill-body {
+			fill:#dedede;
+		}
+
+
+    	&__text-block {
+			width: 525px;
+			margin-top: 40px;
+			vertical-align: middle;
+		}
+
+
+		&__header {
+    		width: auto;
+    		margin-bottom: 20px;
+    	}
+
+
+		&__text {
+			margin-bottom: 35px;
+			font-size: 18px;
+			line-height: 30px;
+		}
+
+
+		.next-string {
+			display: none;
+		}
+
+
+		&__link {
+			font-size: 18px;
+			color: @red-pink;
+		}
+	}
+
 }

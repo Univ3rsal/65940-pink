@@ -4,8 +4,65 @@
 
 	&__logo {
 		display: block;
+		width: 146px;
+		height: 40px;
+		margin: @h-center;
 		margin-bottom: 40px;
+		color: #283645;
 		text-align: center;
+
+
+		&:hover {
+			color: @red-pink;
+		}
+
+
+		&:active {
+			color: #283645;
+			opacity: 0.3;
+		}
+	}
+
+
+	&__logo-mobile-tablet {
+
+			.fill__logo {
+				fill: currentColor;
+			}
+
+
+			.fill__glasses {
+				fill: @red-pink;
+			}
+	}
+
+
+	&__logo-desktop {
+		display: none;
+	}
+
+
+	&__developer-link-logo {
+		color: @red-pink;
+
+
+
+		&:hover {
+			color: #283645; 
+		}
+
+
+		&:active {
+			color: #283645;
+			opacity: 0.3; 
+		}
+	}
+
+
+	&__developer-logo {
+		.fill {
+			fill: currentColor;
+		}
 	}
 
 
@@ -24,17 +81,27 @@
 
 
 			&--twitter {
-				background: url('@{img-path}/sprite-social.png') 13px 12px no-repeat;
+				background: url('@{img-path}/twitter.svg') 10px 12px no-repeat;
 			}
 
 
 			&--fb {
-				background: url('@{img-path}/sprite-social.png') -25px 12px no-repeat;
+				background: url('@{img-path}/facebook.svg') 17px 12px no-repeat;
 			}
 
 
 			&--youtube {
-				background: url('@{img-path}/sprite-social.png') -60px 12px no-repeat;
+				background: url('@{img-path}/youtube.svg') 14px 12px no-repeat;
+			}
+
+
+			&:hover {
+				border:3px solid #283645;
+			}
+
+
+			&:active {
+				opacity: 0.3;
 			}
 		}
 
@@ -84,6 +151,7 @@
 
 @media (min-width: 700px) {
 
+
 	.page-footer {
 		display: flex;
 		padding: 40px 40px 0 40px;
@@ -91,8 +159,72 @@
 		flex-direction: row;
 
 
+		&__logo {
+			margin: 0;
+		}
+
+
 		&__developer{
 			margin-top:10px;
 		}
 	} 
+}
+
+
+@media (min-width: 1200px) {
+
+
+	.page-footer {
+
+		padding-top: 70px;
+		padding-bottom: 30px;
+		padding-left: 130px;
+		padding-right: 130px;
+
+
+		&__logo {
+			margin: 0;
+
+
+			&:hover {
+				color: @red-pink;
+			}
+
+
+			&:active {
+				color: #283645;
+				opacity: 0.3;
+			}
+		}
+
+
+		&__developer {
+
+			&-text {
+				font-size: 18px;
+			}
+		}
+
+		
+		&__logo-desktop {
+			display: block;
+
+
+			.fill__logo {
+				fill: currentColor;
+			}
+
+
+			.fill__glasses {
+				fill: @red-pink;
+			}
+		}
+
+
+		&__logo-mobile-tablet {
+			display: none;
+		}
+
+
+	}
 }
