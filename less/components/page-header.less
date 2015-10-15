@@ -4,7 +4,6 @@
     width: 280px;
     padding: 20px 20px;
     background: rgba(0, 0, 0, .3);
-    .clearfix();
     z-index: 999;
 
 
@@ -13,13 +12,80 @@
         float: left;
         width: 74px;
         height: 23px;
-        background: url('@{img-path}/logo.png') 0 0 no-repeat;
+        color: white;
+
+        :hover {
+            color: @red-pink;
+        }
+
+        :active {
+            color: white;
+            opacity: 0.3;
+        }
+    }
+
+
+    &__logo-desktop {
+            display: none;
+        }
+
+
+    &__logo-mobile {
+
+        .fill {
+            fill: currentColor;
+        }
+    }
+
+
+    &__logo-tablet {
+        display: none;
+    }
+
+    
+    &__toggle {
+        position: absolute;
+        right: 20px;
+        top:50%;
+        width: 50px;
+        height: 25px;
+        transform: translateY(-50%);
+        z-index: 1000;
+
+
+        &:hover div {
+            background: @red-pink;
+        }
+
+        
+
+        &:active div {
+            background: @red-pink;
+            opacity: 0.3;
+        }
+
+    }
+
+
+    &__stripe {
+        width: 50px;
+        height: 4px;
+        margin-bottom: 6px;
+        background: white;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+
+            
+
 
     }
 }
 
 
 @media (min-width: 700px) {
+
     .page-header {
         width: 620px;
         padding-top: 25px;
@@ -28,12 +94,70 @@
         padding-left: 40px;
 
 
+        &__logo-mobile {
+            display: none;
+        }
+
+
+        &__logo-desktop {
+            display: none;
+        }
+
+
         &__logo {
             display: inline-block;
             width: 145px;
             height: 40px;
-            background: url('@{img-path}/logotype-white-tablet.svg') 0 0 no-repeat;
-        
+        }
+
+
+        &__logo-tablet {
+            display: block;
+
+            .fill {
+                fill:currentColor;
+            }
+        }
+
+
+        &__toggle {
+            right: 40px;
         }
     }
+}
+
+
+@media (min-width: 1200px) {
+    
+    .page-header {
+        width: 940px;
+        padding-right: 130px;
+        padding-left: 130px;
+
+        
+        &__logo-desktop {
+            display: block;
+
+            .fill__body {
+                fill:currentColor;
+            }
+
+
+            .fill__stars {
+                fill:@red-pink;
+            }
+        }
+
+
+        &__logo-tablet {
+            display: none;
+        }
+
+
+        &__toggle {
+            display: none;
+        }
+        
+    }
+
 }
