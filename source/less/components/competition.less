@@ -1,0 +1,663 @@
+.competition
+{
+    &-descr__text
+    {
+        font-size: 14px;
+        line-height: 30px;
+
+        padding: 45px 20px 40px 20px;
+
+        text-align: center;
+    }
+
+    &-forms
+    {
+        margin: 0;
+        padding: 0;
+    }
+
+    &-initials
+    {
+        display: block;
+
+        padding: 0 20px;
+        padding-bottom: 40px;
+
+
+        &__item
+        {
+            margin-bottom: 22px;
+        }
+    }
+
+
+    &-os-type
+    {
+        display: block;
+
+        padding-top: 40px;
+        padding-bottom: 20px;
+
+        background-color: @light-grey;
+    }
+
+    &-trip
+    {
+        padding-top: 45px;
+        padding-bottom: 30px;
+
+
+        .field-title
+        {
+            margin-bottom: 20px;
+            margin-left: 0;
+
+            text-align: center;
+        }
+
+        .field-input
+        {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__counter
+    {
+        width: 280px;
+        height: 60px;
+        margin-bottom: 15px;
+
+        .field-input
+        {
+            width: 125px;
+        }
+    }
+
+
+    &-companions
+    {
+        padding-top: 30px;
+        padding-bottom: 40px;
+
+        background-color: @light-grey;
+
+
+        &__item
+        {
+            margin-bottom: 40px;
+
+            &:last-child
+            {
+                margin-bottom: 0;
+            }
+        }
+
+
+        &__item-number
+        {
+            display: inline-block;
+
+            .field-input:hover
+            {
+                border-color: @dark-grey;
+            }
+        }
+
+
+        &__item-name
+        {
+            display: inline-block;
+
+            margin-bottom: 20px;
+        }
+
+
+        &__item-nickname
+        {
+            display: inline-block;
+
+            margin-left: 59px;
+        }
+    }
+
+
+    &-achievements
+    {
+        padding-top: 45px;
+        padding-bottom: 45px;
+
+        &__items-block
+        {
+            margin-bottom: 45px;
+
+
+            &:last-of-type
+            {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+
+    &-photo
+    {
+        margin-bottom: 50px;
+        padding-top: 35px;
+
+        background-color: @light-grey;
+
+        > .divider
+        {
+            margin-top: 30px;
+        }
+
+
+        &__items
+        {
+            img
+            {
+                width: 68px;
+                height: 68px;
+
+                border: 1px solid #c1c1c1;
+            }
+        }
+
+        &__name
+        {
+            font-size: 12px;
+
+            display: block;
+
+            text-transform: uppercase;
+            word-break: break-all;
+        }
+
+        &__item
+        {
+            position: relative;
+
+            display: inline-block;
+
+            width: 68px;
+            margin-right: 37px;
+            margin-bottom: 20px;
+
+            vertical-align: top;
+
+
+            &:nth-of-type(3n+3)
+            {
+                margin-right: 0;
+            }
+        }
+
+
+        &__delete
+        {
+            position: absolute;
+            z-index: 92;
+            top: -16px;
+            right: -16px;
+
+            display: block;
+
+            width: 27px;
+            height: 27px;
+
+            cursor: pointer;
+
+            border: 2px solid #c1c1c1;
+            border-radius: 20px;
+            background: white;
+
+
+            &::before
+            {
+                position: absolute;
+                top: 50%;
+                left: 6px;
+
+                width: 15px;
+                height: 2px;
+
+                content: '';
+                transform: translateY(-50%) rotate(45deg);
+
+                background: #c1c1c1;
+            }
+
+
+            &::after
+            {
+                position: absolute;
+                top: 50%;
+                right: 6px;
+
+                width: 15px;
+                height: 2px;
+
+                content: '';
+                transform: translateY(-50%) rotate(-45deg);
+
+                background: #c1c1c1;
+            }
+
+
+            &:hover
+            {
+                border-color: #283645;
+            }
+
+
+            &:hover:after,
+            &:hover:before
+            {
+                background: #283645;
+            }
+
+
+            &:active
+            {
+                background: #283645;
+            }
+
+
+            &:active:after,
+            &:active:before
+            {
+                background: white;
+            }
+        }
+    }
+
+
+    &__fieldset-header
+    {
+        font-size: 14px;
+        line-height: 18px;
+
+        padding-bottom: 38px;
+
+        text-align: center;
+        text-transform: uppercase;
+
+        color: @red-pink;
+    }
+}
+
+
+
+@media (min-width: 700px)
+{
+    .competition
+    {
+        &-descr__text
+        {
+            font-size: 18px;
+            line-height: 30px;
+
+            padding: 90px 70px 40px 70px;
+
+            text-align: center;
+        }
+
+
+        &-initials
+        {
+            margin-bottom: 60px;
+            padding: 0 40px;
+        }
+
+
+        &-os-type
+        {
+            background: none;
+        }
+
+
+        &-trip
+        {
+            position: relative;
+
+            padding-top: 30px;
+            padding-bottom: 35px;
+
+            .field-input
+            {
+                width: 195px;
+            }
+
+            .field-title
+            {
+                margin-bottom: 0;
+                margin-left: 20px;
+
+                text-align: left;
+            }
+        }
+
+
+        &__date-out-item
+        {
+            display: inline-block;
+
+            margin-right: 13px;
+            margin-bottom: 30px;
+
+            vertical-align: top;
+        }
+
+
+        &__counter-item
+        {
+            display: inline-block;
+
+            margin-bottom: 30px;
+
+            vertical-align: top;
+        }
+
+
+        &__date-back-item
+        {
+            display: inline-block;
+        }
+
+
+        &__counter
+        {
+            width: auto;
+            margin-bottom: 18px;
+
+            .field-input--counter
+            {
+                width: 86px;
+            }
+        }
+
+
+        &-companions
+        {
+            background-color: white;
+
+            &__item
+            {
+                position: relative;
+            }
+
+
+            &__item-number
+            {
+                margin-right: 20px;
+            }
+
+
+            &__item-nickname
+            {
+                margin-left: 80px;
+            }
+
+
+            .field-input--companion-name,
+            .field-input--companion-nickname
+            {
+                width: 260px;
+            }
+        }
+
+
+        &-photo
+        {
+            background: none;
+
+
+            > .divider
+            {
+                margin-top: 40px;
+                margin-bottom: 65px;
+            }
+
+
+            &__items
+            {
+                img
+                {
+                    width: 120px;
+                    height: 120px;
+
+
+                    &:nth-of-type(3n+3)
+                    {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+
+            &__item
+            {
+                width: 120px;
+                margin-right: 68px;
+                margin-bottom: 47px;
+            }
+
+
+            &__delete
+            {
+                top: -20px;
+                right: -16px;
+
+                width: 33px;
+                height: 33px;
+
+
+                &::before
+                {
+                    width: 21px;
+                    height: 2px;
+                }
+
+
+                &::after
+                {
+                    width: 21px;
+                    height: 2px;
+                }
+            }
+        }
+
+
+        &-photo__name
+        {
+            font-size: 14px;
+        }
+
+
+        &-send-form
+        {
+            position: relative;
+
+            margin: 0 40px;
+            margin-top: 65px;
+            margin-bottom: 60px;
+        }
+
+
+        &__fieldset-header
+        {
+            display: none;
+        }
+    }
+}
+
+
+@media (min-width: 1200px)
+{
+    .competition
+    {
+        &-descr__text
+        {
+            padding-right: 210px;
+            padding-bottom: 70px;
+            padding-left: 210px;
+        }
+
+
+        &-initials
+        {
+            margin-bottom: 55px;
+            padding: 0 130px;
+
+
+            &__item
+            {
+                display: inline-block;
+
+                margin-right: 23px;
+                margin-bottom: 0;
+
+                vertical-align: top;
+
+
+                &:last-child
+                {
+                    margin-right: 0;
+                }
+            }
+        }
+
+
+        &-os-type
+        {
+            padding-top: 50px;
+            padding-bottom: 15px;
+
+
+            &__item
+            {
+                display: inline-block;
+
+                margin-right: 107px;
+
+                vertical-align: top;
+
+
+                &:last-child
+                {
+                    margin-right: 0;
+                }
+            }
+        }
+
+
+        &-trip
+        {
+            padding-bottom: 16px;
+        }
+
+
+        &__date-out-item
+        {
+            margin-right: 39px;
+            margin-bottom: 0;
+        }
+
+
+        &__counter-item
+        {
+            margin-right: 38px;
+            margin-bottom: 0;
+        }
+
+
+        &__counter
+        {
+            width: auto;
+
+
+            .field-input--counter
+            {
+                width: 100px;
+            }
+        }
+
+
+        &-companions
+        {
+            &__item
+            {
+                margin-bottom: 0;
+            }
+
+
+            &__item-name
+            {
+                margin-right: 20px;
+            }
+
+
+            &__item-nickname
+            {
+                margin-left: 0;
+            }
+        }
+
+
+        &-achievements
+        {
+            padding-bottom: 57px;
+
+
+            &__items-block
+            {
+                display: inline-block;
+
+                width: 265px;
+                margin-right: 34px;
+                margin-bottom: 0;
+
+                vertical-align: top;
+
+
+                &:last-child
+                {
+                    width: 210px;
+                    margin-right: 0;
+                }
+            }
+        }
+
+
+        &-photo
+        {
+            padding-bottom: 28px;
+
+            img
+            {
+                margin-right: 54px;
+                margin-bottom: 27px;
+
+
+                &:nth-of-type(3n+3)
+                {
+                    margin-right: 54px;
+                }
+
+
+                &:nth-of-type(5n+5)
+                {
+                    margin-right: 0;
+                }
+            }
+        }
+
+
+        &-send-form
+        {
+            margin: 0 130px;
+            margin-top: 65px;
+            margin-bottom: 60px;
+        }
+    }
+}

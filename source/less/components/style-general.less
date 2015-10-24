@@ -1,0 +1,351 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+
+h1
+{
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+
+h2
+{
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+
+h3
+{
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+p
+{
+    font-family: 'Open Sans', 'Arial', sans-serif;
+}
+
+
+a
+{
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-size: 18px;
+}
+
+
+label
+{
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-size: 18px;
+}
+
+
+input
+{
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-size: 18px;
+}
+
+
+.font-for-btns
+{
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.wrapper
+{
+    width: 320px;
+    margin: @h-center;
+}
+
+
+.clearfix
+{
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+
+
+.toggle
+{
+    display: none;
+}
+
+
+fieldset
+{
+    width: 280px;
+    padding: 0 20px;
+
+    border: none;
+
+
+    legend
+    {
+        display: none;
+    }
+}
+
+
+.divider
+{
+    width: 100%;
+    height: 2px;
+    margin-top: 48px;
+    margin-bottom: 35px;
+
+    background-color: @dark-grey;
+}
+
+
+<<<<<<< HEAD:source/less/components/style-general.less
+.popup
+{
+    position: absolute;
+    top: 3100px;
+
+=======
+.popup {
+>>>>>>> b3091d6a2c8a349e3f4c837cadaa203c8e583cc3:less/components/style-general.less
+    display: none;
+
+    width: 320px;
+    padding-bottom: 50px;
+
+    text-align: center;
+
+    background: @light-grey;
+    box-shadow: 0 0 10px 10px rgba(0,0,0,.1);
+
+
+    &__text-block
+    {
+        margin-bottom: 50px;
+        padding: 40px 20px 35px 20px;
+
+        background-color: white;
+    }
+
+
+    &__header
+    {
+        margin-bottom: 25px;
+    }
+}
+
+
+.public-date
+{
+    font-size: 12px;
+
+    margin-bottom: 20px;
+
+    text-transform: uppercase;
+
+    color: @red-pink;
+
+
+    &--center
+    {
+        text-align: center;
+    }
+}
+
+
+.bottom-note
+{
+    font-size: 14px;
+
+    margin-top: 40px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+
+<<<<<<< HEAD:source/less/components/style-general.less
+    &__star
+    {
+        color: @red-pink;
+    }
+
+
+    &__additional-text
+    {
+        display: none;
+=======
+    &__star {
+        color:@red-pink;
+>>>>>>> b3091d6a2c8a349e3f4c837cadaa203c8e583cc3:less/components/style-general.less
+    }
+
+
+    &__additional-text {
+        display: none;
+    }
+}
+
+
+.comment
+{
+    margin-bottom: 25px;
+    padding: 0 22px;
+
+    border-left: 2px solid @red-pink;
+
+
+    &__text
+    {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 27px;
+    }
+
+
+    &__who-wrote
+    {
+        font-size: 14px;
+        font-style: italic;
+        line-height: 27px;
+
+        color: @dark-grey;
+    }
+}
+
+
+@media (min-width: 700px)
+{
+    .wrapper
+    {
+        width: 700px;
+    }
+
+
+    .bottom-note
+    {
+        position: absolute;
+        top: 50%;
+        right: 0;
+
+        display: inline-block;
+
+        margin: 0;
+
+        transform: translateY(-50%);
+    }
+
+
+    fieldset
+    {
+        width: 496px;
+        margin: 0 40px;
+        margin-bottom: 60px;
+        padding-right: 60px;
+        padding-left: 60px;
+
+        border: 2px solid @light-grey;
+
+        legend
+        {
+            font-family: 'Open Sans', 'Arial', sans-serif;
+            font-size: 14px;
+
+            display: block;
+
+            text-align: center;
+            text-transform: uppercase;
+
+            color: @red-pink;
+        }
+    }
+}
+
+
+@media (min-width: 1200px)
+{
+    .wrapper
+    {
+        width: 1200px;
+
+        box-shadow: 0 0 5px 5px @light-grey;
+    }
+
+
+    fieldset
+    {
+        width: 817px;
+        margin-right: 130px;
+        margin-left: 130px;
+        padding-right: 60px;
+        padding-left: 60px;
+    }
+
+
+    .bottom-note
+    {
+        width: 320px;
+
+
+        &__additional-text
+        {
+            display: inline-block;
+
+            margin-left: 5px;
+        }
+    }
+}
+<<<<<<< HEAD:source/less/components/style-general.less
+=======
+
+
+@media (min-width: 1200px) {
+
+
+    .wrapper {
+        width: 1200px;
+        box-shadow: 0 0 5px 5px @light-grey;
+    }
+    
+
+    fieldset {
+        margin-left: 130px;
+        margin-right: 130px;
+        width: 817px;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+
+    .bottom-note {
+        width: 320px;
+        
+
+        &__additional-text {
+            display: inline-block;
+            margin-left: 5px;
+        }
+    }
+
+    .effect__img {
+        width: 600px;
+        height: 500px;
+    }
+
+}
+>>>>>>> b3091d6a2c8a349e3f4c837cadaa203c8e583cc3:less/components/style-general.less

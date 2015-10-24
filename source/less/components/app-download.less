@@ -1,0 +1,152 @@
+.app-download
+{
+    padding: 28px 20px;
+
+    text-align: center;
+
+    background-color: @dark-blue;
+
+
+    &__btn
+    {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        font-weight: @bold;
+
+        display: block;
+
+        margin-bottom: 32px;
+        padding: 12px 20px;
+
+        text-align: center;
+        text-decoration: none;
+
+        color: white;
+        border: 3px solid white;
+        border-radius: 30px;
+
+
+        &:hover
+        {
+            color: @red-pink;
+            background: white;
+        }
+
+
+        &:active
+        {
+            color: #f1becc;
+            background: white;
+        }
+    }
+
+
+    &__os-icon
+    {
+        position: relative;
+
+        display: inline-block;
+
+        width: 60px;
+        height: 60px;
+        margin-right: 15px;
+        margin-bottom: 15px;
+
+        vertical-align: middle;
+    }
+
+
+    &__os-icon img
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+    }
+
+
+    &__os-icon:last-child
+    {
+        margin-right: 0;
+    }
+
+
+    &__text
+    {
+        font-size: 14px;
+        font-weight: @light;
+        line-height: 24px;
+
+        display: block;
+
+        width: 280px;
+
+        color: white;
+    }
+}
+
+
+@media (min-width: 700px)
+{
+    .app-download
+    {
+        position: relative;
+        z-index: 1000;
+
+        width: 280px;
+        margin-top: -353px;
+        margin-bottom: 100px;
+        padding: 0 40px;
+
+        background: none;
+
+
+        &__btn
+        {
+            margin-bottom: 45px;
+        }
+
+
+        &__os-icon
+        {
+            margin-bottom: 30px;
+        }
+
+
+        &__text
+        {
+            font-size: 18px;
+            font-weight: 300;
+
+            width: 308px;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+
+
+@media (min-width: 1200px)
+{
+    .app-download
+    {
+        width: 300px;
+        margin-top: -405px;
+        padding: 0 130px;
+
+
+        &__btn
+        {
+            font-size: 21px;
+
+            margin-bottom: 65px;
+        }
+
+
+        &__os-icon
+        {
+            margin-bottom: 48px;
+        }
+    }
+}

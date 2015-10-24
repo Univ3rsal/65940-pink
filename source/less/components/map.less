@@ -1,0 +1,98 @@
+.map
+{
+    position: relative;
+
+    overflow: hidden;
+
+    width: 320px;
+    height: 200px;
+
+    background: url('@{img-path}/map.jpg') 0 -428px no-repeat #EBE7DE;
+
+
+    &::before
+    {
+        position: absolute;
+        top: 0;
+
+        display: block;
+
+        content: '';
+
+        border: 160px solid transparent;
+        border-top: 32px solid white;
+    }
+
+
+    &::after
+    {
+        position: absolute;
+        top: 115px;
+        left: 50%;
+
+        display: block;
+
+        width: 12px;
+        height: 12px;
+
+        content: '';
+        transform: translateX(-50%);
+
+        border: 9px solid white;
+        border-radius: 21px;
+        background-color: @red-pink;
+    }
+}
+
+
+@media (min-width: 700px)
+{
+    .map
+    {
+        width: 700px;
+        height: 382px;
+
+        background: url('@{img-path}/map-m.jpg') 0 0 no-repeat #EBE7DE;
+
+
+
+        &::before
+        {
+            border: 350px solid transparent;
+            border-top: 75px solid white;
+        }
+
+
+        &::after
+        {
+            top: 200px;
+        }
+    }
+}
+
+
+@media (min-width: 1200px)
+{
+    .map
+    {
+        width: 1200px;
+        height: 520px;
+        margin-top: -25px;
+
+        background: url('@{img-path}/map-b.jpg') 0 -265px no-repeat #EBE7DE;
+
+
+        &::before
+        {
+            border: 600px solid transparent;
+            border-top: 125px solid white;
+            outline: 2px solid red;
+        }
+
+
+        &::after
+        {
+            top: 280px;
+        }
+    }
+}
