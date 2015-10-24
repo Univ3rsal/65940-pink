@@ -1,0 +1,274 @@
+.main-nav
+{
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+
+    display: none;
+
+
+    &--show
+    {
+        display: block;
+    }
+
+
+    &__item
+    {
+        position: relative;
+
+        list-style: none;
+
+        border-top: 1px solid #405361;
+        border-bottom: 2px solid black;
+        background-color: @top-menu-color;
+    }
+
+
+    &__item
+    {
+        a
+        {
+            font-weight: 700;
+
+            display: block;
+
+            width: 280px;
+            padding: 22px 20px;
+
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            color: white;
+        }
+
+
+        &:hover a
+        {
+            color: @red-pink;
+        }
+
+
+        &:active a
+        {
+            opacity: .3;
+            color: @red-pink;
+        }
+
+
+        &:first-child
+        {
+            padding: 19px 20px;
+        }
+    }
+
+
+    &__item-logo
+    {
+        z-index: 999;
+
+        width: 74px;
+        height: 23px;
+
+        background: url('@{img-path}/logotype-white-mobile.svg') 0 0 no-repeat;
+    }
+
+
+    &__toggle-cross
+    {
+        position: absolute;
+        z-index: 1001;
+        top: 50%;
+        right: 20px;
+
+        width: 23px;
+        height: 23px;
+
+        cursor: pointer;
+        transform: translateY(-50%);
+
+
+        &:hover div
+        {
+            background: @red-pink;
+        }
+
+
+        &:active div
+        {
+            opacity: .3;
+            background: @red-pink;
+        }
+
+
+        &line
+        {
+            position: absolute;
+            top: 50%;
+
+            width: 30px;
+            height: 3px;
+
+            background: white;
+
+
+            &-1
+            {
+                left: -4px;
+
+                transform: translateY(-50%) rotate(45deg);
+            }
+
+
+            &-2
+            {
+                right: -4px;
+
+                transform: translateY(-50%) rotate(-45deg);
+            }
+        }
+    }
+}
+
+
+@media (min-width: 700px)
+{
+    .main-nav
+    {
+        display: none;
+
+
+        &--show
+        {
+            display: block;
+        }
+
+
+
+        &__toggle
+        {
+            position: relative;
+            top: 15px;
+        }
+
+        &__item
+        {
+            a
+            {
+                width: 620px;
+                padding: 22px 40px;
+            }
+
+            &:first-child
+            {
+                padding: 25px 40px;
+            }
+        }
+
+
+        &__item-logo
+        {
+            width: 145px;
+            height: 40px;
+
+            background: url('@{img-path}/logotype-white-tablet.svg') 0 0 no-repeat;
+        }
+
+
+        &__toggle-cross
+        {
+            right: 40px;
+        }
+    }
+}
+
+
+@media (min-width: 1200px)
+{
+    .main-nav
+    {
+        position: relative;
+
+        display: block;
+        float: right;
+
+        margin-top: 15px;
+
+
+        &__toggle
+        {
+            display: none;
+        }
+
+
+        &__list
+        {
+            display: flex;
+
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+
+        &__item--logo
+        {
+            display: none;
+        }
+
+
+        &__item
+        {
+            min-height: 30px;
+            margin-right: 72px;
+
+            border: none;
+            background-color: transparent;
+
+
+            &:first-child
+            {
+                display: none;
+            }
+
+
+            &:last-of-type
+            {
+                margin-right: 0;
+            }
+
+
+            a
+            {
+                font-weight: 300;
+
+                width: auto;
+                padding: 0;
+
+                text-transform: none;
+
+                color: white;
+            }
+
+
+            &:hover
+            {
+                box-shadow: 0 2px 0 0 white;
+            }
+
+
+            &:hover a
+            {
+                color: white;
+            }
+
+
+            &:active
+            {
+                opacity: .3;
+                box-shadow: none;
+            }
+        }
+    }
+}

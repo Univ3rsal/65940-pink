@@ -1,0 +1,272 @@
+.page-footer
+{
+    padding: 60px 20px 45px 20px;
+
+
+    &__logo
+    {
+        display: block;
+
+        width: 146px;
+        height: 40px;
+        margin: @h-center;
+        margin-bottom: 40px;
+
+        text-align: center;
+
+        color: #283645;
+
+
+        &:hover
+        {
+            color: @red-pink;
+        }
+
+
+        &:active
+        {
+            opacity: .3;
+            color: #283645;
+        }
+    }
+
+
+    &__logo-mobile-tablet
+    {
+        .fill__logo
+        {
+            fill: currentColor;
+        }
+
+
+        .fill__glasses
+        {
+            fill: @red-pink;
+        }
+    }
+
+
+    &__logo-desktop
+    {
+        display: none;
+    }
+
+
+    &__developer-link-logo
+    {
+        color: @red-pink;
+
+
+
+        &:hover
+        {
+            color: #283645;
+        }
+
+
+        &:active
+        {
+            opacity: .3;
+            color: #283645;
+        }
+    }
+
+
+    &__developer-logo
+    {
+        .fill
+        {
+            fill: currentColor;
+        }
+    }
+
+
+    .social-links
+    {
+        margin-bottom: 35px;
+
+        text-align: center;
+
+        li:last-child
+        {
+            margin-right: 0;
+        }
+
+        &__item
+        {
+            display: block;
+
+            width: 45px;
+            height: 45px;
+
+            border: 3px solid @dark-grey;
+            border-radius: 30px;
+            background-color: white;
+
+
+            &--twitter
+            {
+                background: url('@{img-path}/twitter.svg') 10px 12px no-repeat;
+            }
+
+
+            &--fb
+            {
+                background: url('@{img-path}/facebook.svg') 17px 12px no-repeat;
+            }
+
+
+            &--youtube
+            {
+                background: url('@{img-path}/youtube.svg') 14px 12px no-repeat;
+            }
+
+
+            &:hover
+            {
+                border: 3px solid #283645;
+            }
+
+
+            &:active
+            {
+                opacity: .3;
+            }
+        }
+
+
+        li
+        {
+            display: inline-block;
+
+            margin-right: 10px;
+
+            list-style: none;
+        }
+    }
+
+
+    &__developer
+    {
+        height: 40px;
+
+        text-align: center;
+
+
+
+        &-text
+        {
+            font-size: 14px;
+
+            display: inline-block;
+
+            margin-right: 10px;
+
+            vertical-align: middle;
+        }
+
+
+        &-logo
+        {
+            display: inline-block;
+
+            vertical-align: middle;
+        }
+    }
+}
+
+
+.page-footer-index
+{
+    display: none;
+}
+
+
+@media (min-width: 700px)
+{
+    .page-footer
+    {
+        display: flex;
+        flex-direction: row;
+
+        padding: 40px 40px 0 40px;
+
+        justify-content: space-between;
+
+
+        &__logo
+        {
+            margin: 0;
+        }
+
+
+        &__developer
+        {
+            margin-top: 10px;
+        }
+    }
+}
+
+
+@media (min-width: 1200px)
+{
+    .page-footer
+    {
+        padding-top: 70px;
+        padding-right: 130px;
+        padding-bottom: 30px;
+        padding-left: 130px;
+
+
+        &__logo
+        {
+            margin: 0;
+
+
+            &:hover
+            {
+                color: @red-pink;
+            }
+
+
+            &:active
+            {
+                opacity: .3;
+                color: #283645;
+            }
+        }
+
+
+        &__developer
+        {
+            &-text
+            {
+                font-size: 18px;
+            }
+        }
+
+
+        &__logo-desktop
+        {
+            display: block;
+
+
+            .fill__logo
+            {
+                fill: currentColor;
+            }
+
+
+            .fill__glasses
+            {
+                fill: @red-pink;
+            }
+        }
+
+
+        &__logo-mobile-tablet
+        {
+            display: none;
+        }
+    }
+}

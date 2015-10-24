@@ -1,0 +1,145 @@
+.effect
+{
+    display: none;
+}
+
+
+@media (min-width: 700px)
+{
+    .effect
+    {
+        display: block;
+
+        padding: 57px 40px;
+
+
+        &__img
+        {
+            display: inline-block;
+
+            margin-right: 44px;
+
+            vertical-align: middle;
+        }
+
+        &__img-fill-body
+        {
+            fill: #eee;
+        }
+
+
+        &__img-fill-circle
+        {
+            fill: @red-pink;
+        }
+
+
+        &__img-fill-number
+        {
+            fill: @red-pink;
+        }
+
+
+        &__text-block
+        {
+            display: inline-block;
+
+            width: 310px;
+
+            vertical-align: middle;
+        }
+
+
+        &__header
+        {
+            font-size: 30px;
+            font-weight: 700;
+
+            display: block;
+
+            width: 170px;
+            margin-bottom: 15px;
+        }
+
+
+        &__text
+        {
+            font-size: 14px;
+            line-height: 24px;
+
+            margin-bottom: 15px;
+        }
+
+
+        &__link
+        {
+            font-size: 14px;
+
+            color: @red-pink;
+        }
+    }
+}
+
+
+@media (min-width: 1200px)
+{
+    .effect
+    {
+        padding: 50px 130px;
+
+        background-color: @light-grey;
+
+
+        &__img
+        {
+            width: 301px;
+            height: 346px;
+            margin-right: 60px;
+        }
+
+
+        &__img-fill-body
+        {
+            fill: #dedede;
+        }
+
+
+        &__text-block
+        {
+            width: 525px;
+            margin-top: 40px;
+
+            vertical-align: middle;
+        }
+
+
+        &__header
+        {
+            width: auto;
+            margin-bottom: 20px;
+        }
+
+
+        &__text
+        {
+            font-size: 18px;
+            line-height: 30px;
+
+            margin-bottom: 35px;
+        }
+
+
+        .next-string
+        {
+            display: none;
+        }
+
+
+        &__link
+        {
+            font-size: 18px;
+
+            color: @red-pink;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.blog-posts
+{
+    padding: 30px 20px 0 20px;
+}
+
+
+.blog-post
+{
+    &__header
+    {
+        margin-bottom: 10px;
+    }
+
+    &__text
+    {
+        font-size: 14px;
+        line-height: 27px;
+
+        margin-bottom: 25px;
+    }
+
+
+    &::after
+    {
+        display: block;
+
+        width: 280px;
+        height: 2px;
+        margin-bottom: 23px;
+
+        content: '';
+
+        background-color: @light-grey;
+    }
+
+
+    &:last-of-type:after
+    {
+        display: none;
+    }
+
+
+    &:last-of-type
+    {
+        margin-bottom: 50px;
+    }
+}

@@ -1,0 +1,284 @@
+.advantages
+{
+    &__promo
+    {
+        padding: 40px 20px;
+    }
+
+
+    &__header
+    {
+        line-height: 28px;
+
+        display: block;
+
+        width: 280px;
+        margin-bottom: 30px;
+
+        text-align: center;
+    }
+
+
+    &__header:last-child
+    {
+        margin-bottom: 25px;
+    }
+
+
+    &__items
+    {
+        padding-top: 50px;
+
+        background-color: @light-grey;
+    }
+
+
+    &__item-block
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    &-item
+    {
+        text-align: center;
+
+        background-color: @light-grey;
+
+        order: 1;
+
+
+        &__header
+        {
+            margin-bottom: 10px;
+            padding: 0 20px;
+        }
+
+
+        &__text
+        {
+            font-size: 14px;
+            font-weight: @regular;
+            line-height: 24px;
+
+            padding: 0 20px;
+            padding-bottom: 32px;
+        }
+    }
+
+
+    &-item-img
+    {
+        margin: @h-center;
+
+        order: 2;
+    }
+
+
+    .cross-line
+    {
+        display: block;
+
+        height: 35px;
+        margin-top: -35px;
+
+        content: '';
+
+        background-image: -webkit-linear-gradient(to right bottom, white 50%, @light-grey 50%);
+        background-image:      -o-linear-gradient(to right bottom, white 50%, @light-grey 50%);
+        background-image:         linear-gradient(to right bottom, white 50%, @light-grey 50%);
+    }
+
+
+    &__img-iphone-1,
+    &__img-iphone-2
+    {
+        display: none;
+    }
+}
+
+
+@media (min-width: 700px)
+{
+    .advantages
+    {
+        position: relative;
+
+        &__promo
+        {
+            padding: 55px 40px;
+        }
+
+
+        &__header
+        {
+            font-size: 40px;
+            line-height: 50px;
+
+            width: 620px;
+            margin: @h-center;
+
+
+            &:last-child
+            {
+                width: 340px;
+            }
+        }
+
+
+        &-item
+        {
+            width: 310px;
+            margin-left: 350px;
+
+            text-align: left;
+
+
+            &__header
+            {
+                padding: 0;
+            }
+
+
+            &__text
+            {
+                margin-bottom: 32px;
+                padding: 0;
+            }
+
+            &:last-of-type
+            {
+                padding-bottom: 15px;
+            }
+        }
+
+
+        &__img-iphone-1,
+        &__img-iphone-2
+        {
+            display: none;
+        }
+
+
+        &__img-iphone-3
+        {
+            position: absolute;
+            bottom: 0;
+            left: 40px;
+
+            display: block;
+
+            margin: @h-center;
+            margin-top: 10px;
+        }
+    }
+}
+
+
+@media (min-width: 1200px)
+{
+    .advantages
+    {
+        &__promo
+        {
+            padding: 92px 130px;
+        }
+
+
+        &__header
+        {
+            font-size: 50px;
+            line-height: 58px;
+
+            width: 780px;
+
+
+            &:last-child
+            {
+                width: 460px;
+            }
+        }
+
+
+        &__items
+        {
+            padding-right: 145px;
+            padding-left: 145px;
+        }
+
+
+
+        &-item
+        {
+            line-height: 30px;
+
+            display: inline-block;
+
+            width: 240px;
+            margin-left: 0;
+
+            text-align: center;
+
+
+            &__header
+            {
+                font-size: 30px;
+
+                margin-bottom: 25px;
+            }
+
+
+            &__text
+            {
+                font-size: 18px;
+                line-height: 30px;
+
+                margin-bottom: 0;
+            }
+        }
+
+
+        .cross-line
+        {
+            height: 92px;
+        }
+
+
+        &__item-block
+        {
+            display: inline-block;
+
+            margin-top: -105px;
+            margin-right: 13px;
+
+            text-align: center;
+            vertical-align: top;
+
+
+            &:last-child
+            {
+                margin-right: 0;
+            }
+        }
+
+
+        &__img-iphone
+        {
+            position: static;
+
+            display: block;
+
+            margin-top: 0;
+            margin-bottom: 55px;
+
+
+            &-1,
+            &-2,
+            &-3
+            {
+                display: block;
+            }
+        }
+    }
+}
