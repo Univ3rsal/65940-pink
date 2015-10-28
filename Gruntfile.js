@@ -28,7 +28,7 @@ module.exports = function(grunt) {
     watch: {
       style: {
         files: ['source/less/**/*.less'],
-        tasks: ['less', 'postcss', 'cmq'],
+        tasks: ['less', 'postcss', 'cmq', 'copy', 'cssmin'],
         options: {
           spawn: false,
           livereload: true
@@ -43,7 +43,8 @@ module.exports = function(grunt) {
       },
       style: {
         files: {
-          "build/css/style.min.css": ["build/css/style.css"]
+          "build/css/style.min.css": ["build/css/style.css"],
+          "build/css/normalize.min.css": ["node_modules/normalize.css/normalize.css"]
         }
       }
     },
@@ -86,7 +87,9 @@ module.exports = function(grunt) {
       html: {
         files: {
           "build/index.min.html": "build/index.html",
-          "build/form.min.html": "build/form.html"
+          "build/form.min.html": "build/form.html",
+          "build/blog.min.html": "build/blog.html",
+          "build/post.min.html": "build/post.html"
         }
       }
     },
@@ -110,8 +113,7 @@ module.exports = function(grunt) {
             "js/form.js",
             "js/index.js",
             "js/jquery.min.js",
-            "index.html",
-            "form.html"
+            "*.html"
           ],
           dest: "build"
         }]

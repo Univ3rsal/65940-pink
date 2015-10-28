@@ -1,47 +1,114 @@
 .blog-posts
 {
     padding: 30px 20px 0 20px;
+
+    &__item
+    {
+        &-header
+        {
+            margin-bottom: 10px;
+        }
+
+        &-text
+        {
+            font-size: 14px;
+            line-height: 27px;
+
+            display: block;
+        }
+
+
+        &::after
+        {
+            display: block;
+
+            width: 100%;
+            margin-top: 25px;
+            margin-bottom: 23px;
+
+            content: '';
+
+            border-bottom: 1px solid @dark-grey;
+        }
+
+
+        &:last-of-type:after
+        {
+            display: none;
+        }
+
+
+        &:last-of-type
+        {
+            margin-bottom: 50px;
+        }
+
+        .public-date
+            {
+                font-size: 12px;
+            }
+    }
 }
 
 
-.blog-post
+
+
+@media (min-width: 700px)
 {
-    &__header
+    .blog-posts
     {
-        margin-bottom: 10px;
+        padding: 90px 100px 0 100px;
+
+
+        &__item
+        {
+            &-header
+            {
+                font-size: 27px;
+
+                position: relative;
+
+                margin-bottom: 10px;
+
+                &::before
+                {
+                    position: absolute;
+                    top: 10px;
+                    left: -60px;
+
+                    width: 28px;
+                    height: 26px;
+
+                    content: '';
+
+                    background: url('@{img-path}/blog-post-icon.svg') 0 0 no-repeat;
+                }
+            }
+
+            &-text
+            {
+                font-size: 18px;
+                line-height: 30px;
+            }
+
+            &::after
+            {
+                margin-top: 40px;
+                margin-bottom: 45px;
+                border-bottom: 2px dotted @dark-grey;
+            }
+
+            .public-date
+            {
+                font-size: 14px;
+            }
+        }
     }
-
-    &__text
+}
+@media (min-width: 1200px)
+{
+    .blog-posts
     {
-        font-size: 14px;
-        line-height: 27px;
-
-        margin-bottom: 25px;
-    }
-
-
-    &::after
-    {
-        display: block;
-
-        width: 280px;
-        height: 2px;
-        margin-bottom: 23px;
-
-        content: '';
-
-        background-color: @light-grey;
-    }
-
-
-    &:last-of-type:after
-    {
-        display: none;
-    }
-
-
-    &:last-of-type
-    {
-        margin-bottom: 50px;
+        padding: 105px 190px 0 190px;
     }
 }
