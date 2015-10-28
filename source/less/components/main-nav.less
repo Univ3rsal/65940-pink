@@ -249,25 +249,20 @@
                 text-transform: none;
 
                 color: white;
-            }
+                border-bottom: 2px solid transparent;
 
 
-            &:hover
-            {
-                box-shadow: 0 2px 0 0 white;
-            }
+                &:hover
+                {
+                    color: white;
+                    border-bottom: 2px solid white;
+                }
 
-
-            &:hover a
-            {
-                color: white;
-            }
-
-
-            &:active
-            {
-                opacity: .3;
-                box-shadow: none;
+                &:active
+                {
+                    opacity: .3;
+                    border-bottom: inherit;
+                }
             }
         }
     }
